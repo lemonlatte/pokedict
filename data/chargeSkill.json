@@ -1,0 +1,749 @@
+[
+  {
+    "type": "Normal",
+    "name": "Hyper Beam",
+    "cname": "破壞死光",
+    "damage": 120,
+    "speed": 5,
+    "energy": 120,
+    "dps": 24
+  },
+  {
+    "type": "Normal",
+    "name": "Body Slam",
+    "cname": "泰山壓頂",
+    "damage": 40,
+    "speed": 1.56,
+    "energy": 80,
+    "dps": 25.64
+  },
+  {
+    "type": "Normal",
+    "name": "Hyper Fang",
+    "cname": "必殺門牙",
+    "damage": 35,
+    "speed": 2.1,
+    "energy": 105,
+    "dps": 16.67
+  },
+  {
+    "type": "Normal",
+    "name": "Stomp",
+    "cname": "踐踏",
+    "damage": 30,
+    "speed": 2.1,
+    "energy": 120,
+    "dps": 14.29
+  },
+  {
+    "type": "Normal",
+    "name": "Swift",
+    "cname": "高速星星",
+    "damage": 30,
+    "speed": 3,
+    "energy": 120,
+    "dps": 10
+  },
+  {
+    "type": "Normal",
+    "name": "Horn Attack",
+    "cname": "角攻擊",
+    "damage": 25,
+    "speed": 2.2,
+    "energy": 100,
+    "dps": 11.36
+  },
+  {
+    "type": "Normal",
+    "name": "Vice Grip",
+    "cname": "剪斷",
+    "damage": 25,
+    "speed": 2.1,
+    "energy": 125,
+    "dps": 11.9
+  },
+  {
+    "type": "Normal",
+    "name": "Wrap",
+    "cname": "綑綁",
+    "damage": 25,
+    "speed": 4,
+    "energy": 125,
+    "dps": 6.25
+  },
+  {
+    "type": "Normal",
+    "name": "Struggle",
+    "cname": "搏鬥",
+    "damage": 15,
+    "speed": 1.695,
+    "energy": 75,
+    "dps": 8.85
+  },
+  {
+    "type": "Steel",
+    "name": "Flash Cannon",
+    "cname": "光澤電炮",
+    "damage": 60,
+    "speed": 3.9,
+    "energy": 180,
+    "dps": 15.38
+  },
+  {
+    "type": "Steel",
+    "name": "Iron Head",
+    "cname": "鐵頭",
+    "damage": 30,
+    "speed": 2,
+    "energy": 90,
+    "dps": 15
+  },
+  {
+    "type": "Steel",
+    "name": "Magnet Bomb",
+    "cname": "磁性風爆",
+    "damage": 30,
+    "speed": 2.8,
+    "energy": 120,
+    "dps": 10.71
+  },
+  {
+    "type": "Fight",
+    "name": "Cross Chop",
+    "cname": "十字斬",
+    "damage": 60,
+    "speed": 2,
+    "energy": 60,
+    "dps": 30
+  },
+  {
+    "type": "Fight",
+    "name": "Brick Break",
+    "cname": "劈磚",
+    "damage": 30,
+    "speed": 1.6,
+    "energy": 90,
+    "dps": 18.75
+  },
+  {
+    "type": "Fight",
+    "name": "Submission",
+    "cname": "地獄滾動",
+    "damage": 30,
+    "speed": 2.1,
+    "energy": 90,
+    "dps": 14.29
+  },
+  {
+    "type": "Fight",
+    "name": "Low Sweep",
+    "cname": "橫掃",
+    "damage": 30,
+    "speed": 2.25,
+    "energy": 120,
+    "dps": 13.33
+  },
+  {
+    "type": "Water",
+    "name": "Hydro Pump",
+    "cname": "水砲",
+    "damage": 90,
+    "speed": 3.8,
+    "energy": 90,
+    "dps": 23.68
+  },
+  {
+    "type": "Water",
+    "name": "Aqua Tail",
+    "cname": "水尾巴",
+    "damage": 45,
+    "speed": 2.35,
+    "energy": 90,
+    "dps": 19.15
+  },
+  {
+    "type": "Water",
+    "name": "Scald",
+    "cname": "熱水",
+    "damage": 55,
+    "speed": 4,
+    "energy": 165,
+    "dps": 13.75
+  },
+  {
+    "type": "Water",
+    "name": "Water Pulse",
+    "cname": "水波動",
+    "damage": 35,
+    "speed": 3.3,
+    "energy": 140,
+    "dps": 10.61
+  },
+  {
+    "type": "Water",
+    "name": "Bubble Beam",
+    "cname": "泡沫光線",
+    "damage": 30,
+    "speed": 2.9,
+    "energy": 120,
+    "dps": 10.34
+  },
+  {
+    "type": "Water",
+    "name": "Aqua Jet",
+    "cname": "噴射水柱",
+    "damage": 25,
+    "speed": 2.35,
+    "energy": 125,
+    "dps": 10.64
+  },
+  {
+    "type": "Water",
+    "name": "Brine",
+    "cname": "海水",
+    "damage": 15,
+    "speed": 2.4,
+    "energy": 75,
+    "dps": 6.25
+  },
+  {
+    "type": "Ice",
+    "name": "Blizzard",
+    "cname": "暴風雪",
+    "damage": 100,
+    "speed": 3.9,
+    "energy": 100,
+    "dps": 25.64
+  },
+  {
+    "type": "Ice",
+    "name": "Ice Beam",
+    "cname": "急凍光線",
+    "damage": 65,
+    "speed": 3.65,
+    "energy": 130,
+    "dps": 17.81
+  },
+  {
+    "type": "Ice",
+    "name": "Ice Punch",
+    "cname": "急凍拳",
+    "damage": 45,
+    "speed": 3.5,
+    "energy": 135,
+    "dps": 12.86
+  },
+  {
+    "type": "Ice",
+    "name": "Icy Wind",
+    "cname": "寒風吹",
+    "damage": 25,
+    "speed": 3.8,
+    "energy": 125,
+    "dps": 6.58
+  },
+  {
+    "type": "Fire",
+    "name": "Fire Blast",
+    "cname": "大字爆",
+    "damage": 100,
+    "speed": 4.1,
+    "energy": 100,
+    "dps": 24.39
+  },
+  {
+    "type": "Fire",
+    "name": "Heat Wave",
+    "cname": "火焰波動",
+    "damage": 80,
+    "speed": 3.8,
+    "energy": 80,
+    "dps": 21.05
+  },
+  {
+    "type": "Fire",
+    "name": "Flamethrower",
+    "cname": "噴射火焰",
+    "damage": 55,
+    "speed": 2.9,
+    "energy": 110,
+    "dps": 18.97
+  },
+  {
+    "type": "Fire",
+    "name": "Fire Punch",
+    "cname": "火焰拳",
+    "damage": 40,
+    "speed": 2.8,
+    "energy": 120,
+    "dps": 14.29
+  },
+  {
+    "type": "Fire",
+    "name": "Flame Wheel",
+    "cname": "火焰輪",
+    "damage": 40,
+    "speed": 4.6,
+    "energy": 160,
+    "dps": 8.7
+  },
+  {
+    "type": "Fire",
+    "name": "Flame Burst",
+    "cname": "爆烈火焰",
+    "damage": 30,
+    "speed": 2.1,
+    "energy": 120,
+    "dps": 14.29
+  },
+  {
+    "type": "Fire",
+    "name": "Flame Charge",
+    "cname": "火焰襲擊",
+    "damage": 25,
+    "speed": 3.1,
+    "energy": 100,
+    "dps": 8.06
+  },
+  {
+    "type": "Electric",
+    "name": "Thunder",
+    "cname": "打雷",
+    "damage": 100,
+    "speed": 4.3,
+    "energy": 100,
+    "dps": 23.26
+  },
+  {
+    "type": "Electric",
+    "name": "Thunderbolt",
+    "cname": "十萬伏特",
+    "damage": 55,
+    "speed": 2.7,
+    "energy": 110,
+    "dps": 20.37
+  },
+  {
+    "type": "Electric",
+    "name": "Thunder Punch",
+    "cname": "雷光掌",
+    "damage": 40,
+    "speed": 2.4,
+    "energy": 120,
+    "dps": 16.67
+  },
+  {
+    "type": "Electric",
+    "name": "Discharge",
+    "cname": "放電",
+    "damage": 35,
+    "speed": 2.5,
+    "energy": 105,
+    "dps": 14
+  },
+  {
+    "type": "Ground",
+    "name": "Earthquake",
+    "cname": "地震",
+    "damage": 100,
+    "speed": 4.2,
+    "energy": 100,
+    "dps": 23.81
+  },
+  {
+    "type": "Ground",
+    "name": "Dig",
+    "cname": "挖洞",
+    "damage": 70,
+    "speed": 5.8,
+    "energy": 210,
+    "dps": 12.07
+  },
+  {
+    "type": "Ground",
+    "name": "Drill Run",
+    "cname": "鑽地",
+    "damage": 50,
+    "speed": 3.4,
+    "energy": 150,
+    "dps": 14.71
+  },
+  {
+    "type": "Ground",
+    "name": "Bulldoze",
+    "cname": "整地",
+    "damage": 35,
+    "speed": 3.4,
+    "energy": 140,
+    "dps": 10.29
+  },
+  {
+    "type": "Ground",
+    "name": "Mud Bomb",
+    "cname": "泥漿炸彈",
+    "damage": 30,
+    "speed": 2.6,
+    "energy": 120,
+    "dps": 11.54
+  },
+  {
+    "type": "Ground",
+    "name": "Bone Club",
+    "cname": "骨棒",
+    "damage": 25,
+    "speed": 1.6,
+    "energy": 100,
+    "dps": 15.63
+  },
+  {
+    "type": "Grass",
+    "name": "Solar Beam",
+    "cname": "太楊烈焰",
+    "damage": 120,
+    "speed": 4.9,
+    "energy": 120,
+    "dps": 24.49
+  },
+  {
+    "type": "Grass",
+    "name": "Power Whip",
+    "cname": "能量鞭打",
+    "damage": 70,
+    "speed": 2.8,
+    "energy": 70,
+    "dps": 25
+  },
+  {
+    "type": "Grass",
+    "name": "Petal Blizzard",
+    "cname": "落花風暴",
+    "damage": 65,
+    "speed": 3.2,
+    "energy": 130,
+    "dps": 20.31
+  },
+  {
+    "type": "Grass",
+    "name": "Leaf Blade",
+    "cname": "刀葉",
+    "damage": 55,
+    "speed": 2.8,
+    "energy": 110,
+    "dps": 19.64
+  },
+  {
+    "type": "Grass",
+    "name": "Seed Bomb",
+    "cname": "種子炸彈",
+    "damage": 40,
+    "speed": 2.4,
+    "energy": 120,
+    "dps": 16.67
+  },
+  {
+    "type": "Rock",
+    "name": "Stone Edge",
+    "cname": "尖石攻擊",
+    "damage": 80,
+    "speed": 3.1,
+    "energy": 80,
+    "dps": 25.81
+  },
+  {
+    "type": "Rock",
+    "name": "Rock Slide",
+    "cname": "山崩地裂",
+    "damage": 50,
+    "speed": 3.2,
+    "energy": 150,
+    "dps": 15.63
+  },
+  {
+    "type": "Rock",
+    "name": "Power Gem",
+    "cname": "寶石能量",
+    "damage": 40,
+    "speed": 2.9,
+    "energy": 120,
+    "dps": 13.79
+  },
+  {
+    "type": "Rock",
+    "name": "Ancient Power",
+    "cname": "古代之力",
+    "damage": 35,
+    "speed": 3.6,
+    "energy": 140,
+    "dps": 9.72
+  },
+  {
+    "type": "Rock",
+    "name": "Rock Tomb",
+    "cname": "岩石封閉",
+    "damage": 30,
+    "speed": 3.4,
+    "energy": 120,
+    "dps": 8.82
+  },
+  {
+    "type": "Bug",
+    "name": "Megahorn",
+    "cname": "百萬噸角擊",
+    "damage": 80,
+    "speed": 3.2,
+    "energy": 80,
+    "dps": 25
+  },
+  {
+    "type": "Bug",
+    "name": "Bug Buzz",
+    "cname": "蟲鳴",
+    "damage": 75,
+    "speed": 4.25,
+    "energy": 150,
+    "dps": 17.65
+  },
+  {
+    "type": "Bug",
+    "name": "Signal Beam",
+    "cname": "信號光束",
+    "damage": 45,
+    "speed": 3.1,
+    "energy": 135,
+    "dps": 14.52
+  },
+  {
+    "type": "Bug",
+    "name": "X-Scissor",
+    "cname": "X-剪刀腳",
+    "damage": 35,
+    "speed": 2.1,
+    "energy": 105,
+    "dps": 16.67
+  },
+  {
+    "type": "Poison",
+    "name": "Sludge Wave",
+    "cname": "污泥波動",
+    "damage": 70,
+    "speed": 3.4,
+    "energy": 70,
+    "dps": 20.59
+  },
+  {
+    "type": "Poison",
+    "name": "Gunk Shot",
+    "cname": "泥漿射擊",
+    "damage": 65,
+    "speed": 3,
+    "energy": 65,
+    "dps": 21.67
+  },
+  {
+    "type": "Poison",
+    "name": "Sludge Bomb",
+    "cname": "污泥炸彈",
+    "damage": 55,
+    "speed": 2.6,
+    "energy": 110,
+    "dps": 21.15
+  },
+  {
+    "type": "Poison",
+    "name": "Sludge",
+    "cname": "汙泥攻擊",
+    "damage": 30,
+    "speed": 2.6,
+    "energy": 120,
+    "dps": 11.54
+  },
+  {
+    "type": "Poison",
+    "name": "Cross Poison",
+    "cname": "十字毒藥",
+    "damage": 25,
+    "speed": 1.5,
+    "energy": 100,
+    "dps": 16.67
+  },
+  {
+    "type": "Poison",
+    "name": "Poison Fang",
+    "cname": "毒牙",
+    "damage": 25,
+    "speed": 2.4,
+    "energy": 125,
+    "dps": 10.42
+  },
+  {
+    "type": "Flying",
+    "name": "Hurricane",
+    "cname": "颶風",
+    "damage": 80,
+    "speed": 3.2,
+    "energy": 80,
+    "dps": 25
+  },
+  {
+    "type": "Flying",
+    "name": "Drill Peck",
+    "cname": "鑽石啄",
+    "damage": 40,
+    "speed": 2.7,
+    "energy": 120,
+    "dps": 14.81
+  },
+  {
+    "type": "Flying",
+    "name": "Aerial Ace",
+    "cname": "迴旋攻擊",
+    "damage": 30,
+    "speed": 2.9,
+    "energy": 120,
+    "dps": 10.34
+  },
+  {
+    "type": "Flying",
+    "name": "Air Cutter",
+    "cname": "破空斬",
+    "damage": 30,
+    "speed": 3.3,
+    "energy": 120,
+    "dps": 9.09
+  },
+  {
+    "type": "Ghost",
+    "name": "Shadow Ball",
+    "cname": "影子球",
+    "damage": 45,
+    "speed": 3.08,
+    "energy": 135,
+    "dps": 14.61
+  },
+  {
+    "type": "Ghost",
+    "name": "Ominous Wind",
+    "cname": "奇異之風",
+    "damage": 30,
+    "speed": 3.1,
+    "energy": 120,
+    "dps": 9.68
+  },
+  {
+    "type": "Dark",
+    "name": "Dark Pulse",
+    "cname": "黑暗脈衝",
+    "damage": 45,
+    "speed": 3.5,
+    "energy": 135,
+    "dps": 12.86
+  },
+  {
+    "type": "Dark",
+    "name": "Night Slash",
+    "cname": "暗夜斬擊",
+    "damage": 30,
+    "speed": 2.7,
+    "energy": 120,
+    "dps": 11.11
+  },
+  {
+    "type": "Psychic",
+    "name": "Psychic",
+    "cname": "幻象術",
+    "damage": 55,
+    "speed": 2.8,
+    "energy": 110,
+    "dps": 19.64
+  },
+  {
+    "type": "Psychic",
+    "name": "Psyshock",
+    "cname": "幻象攻擊",
+    "damage": 40,
+    "speed": 2.8,
+    "energy": 120,
+    "dps": 14.29
+  },
+  {
+    "type": "Psychic",
+    "name": "Psybeam",
+    "cname": "幻象光",
+    "damage": 40,
+    "speed": 3.8,
+    "energy": 160,
+    "dps": 10.53
+  },
+  {
+    "type": "Dragon",
+    "name": "Dragon Pulse",
+    "cname": "龍衝擊",
+    "damage": 65,
+    "speed": 3.6,
+    "energy": 130,
+    "dps": 18.06
+  },
+  {
+    "type": "Dragon",
+    "name": "Dragon Claw",
+    "cname": "龍爪",
+    "damage": 35,
+    "speed": 1.5,
+    "energy": 70,
+    "dps": 23.33
+  },
+  {
+    "type": "Dragon",
+    "name": "Twister",
+    "cname": "龍捲風",
+    "damage": 25,
+    "speed": 2.7,
+    "energy": 125,
+    "dps": 9.26
+  },
+  {
+    "type": "Fairy",
+    "name": "Moonblast",
+    "cname": "月光攻擊",
+    "damage": 85,
+    "speed": 4.1,
+    "energy": 85,
+    "dps": 20.73
+  },
+  {
+    "type": "Fairy",
+    "name": "Play Rough",
+    "cname": "嬉戲",
+    "damage": 55,
+    "speed": 2.9,
+    "energy": 110,
+    "dps": 18.97
+  },
+  {
+    "type": "Fairy",
+    "name": "Dazzling Gleam",
+    "cname": "魔法照耀",
+    "damage": 70,
+    "speed": 4.2,
+    "energy": 210,
+    "dps": 16.67
+  },
+  {
+    "type": "Fairy",
+    "name": "Draining Kiss",
+    "cname": "吸取之吻",
+    "damage": 25,
+    "speed": 2.8,
+    "energy": 125,
+    "dps": 8.93
+  },
+  {
+    "type": "Fairy",
+    "name": "Disarming Voice",
+    "cname": "魅惑之聲",
+    "damage": 25,
+    "speed": 3.9,
+    "energy": 125,
+    "dps": 6.41
+  }
+]

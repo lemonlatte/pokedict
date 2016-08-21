@@ -1,0 +1,371 @@
+[
+  {
+    "type": "Normal",
+    "name": "Tackle",
+    "cname": "衝擊",
+    "energy": 7,
+    "damage": 12,
+    "cooldown": 1.1,
+    "dps": 10.91
+  },
+  {
+    "type": "Normal",
+    "name": "Cut",
+    "cname": "一字斬",
+    "energy": 7,
+    "damage": 12,
+    "cooldown": 1.33,
+    "dps": 9.02
+  },
+  {
+    "type": "Normal",
+    "name": "Quick Attack",
+    "cname": "電光一閃",
+    "energy": 7,
+    "damage": 10,
+    "cooldown": 1.33,
+    "dps": 7.52
+  },
+  {
+    "type": "Normal",
+    "name": "Pound",
+    "cname": "拍擊",
+    "energy": 7,
+    "damage": 7,
+    "cooldown": 0.54,
+    "dps": 12.96
+  },
+  {
+    "type": "Normal",
+    "name": "Scratch",
+    "cname": "利爪",
+    "energy": 7,
+    "damage": 6,
+    "cooldown": 0.5,
+    "dps": 12
+  },
+  {
+    "type": "Steel",
+    "name": "Steel Wing",
+    "cname": "鋼鐵翼擊",
+    "energy": 4,
+    "damage": 15,
+    "cooldown": 1.33,
+    "dps": 11.28
+  },
+  {
+    "type": "Steel",
+    "name": "Bullet Punch",
+    "cname": "子彈重擊",
+    "energy": 7,
+    "damage": 10,
+    "cooldown": 1.2,
+    "dps": 8.33
+  },
+  {
+    "type": "Steel",
+    "name": "Metal Claw",
+    "cname": "金屬爪擊",
+    "energy": 7,
+    "damage": 8,
+    "cooldown": 0.63,
+    "dps": 12.7
+  },
+  {
+    "type": "Fight",
+    "name": "Low Kick",
+    "cname": "低空踢",
+    "energy": 7,
+    "damage": 5,
+    "cooldown": 0.6,
+    "dps": 8.33
+  },
+  {
+    "type": "Fight",
+    "name": "Karate Chop",
+    "cname": "手刀",
+    "energy": 7,
+    "damage": 6,
+    "cooldown": 0.8,
+    "dps": 7.5
+  },
+  {
+    "type": "Fight",
+    "name": "Rock Smash",
+    "cname": "岩石粉碎",
+    "energy": 7,
+    "damage": 15,
+    "cooldown": 1.41,
+    "dps": 10.64
+  },
+  {
+    "type": "Water",
+    "name": "Bubble",
+    "cname": "泡泡",
+    "energy": 15,
+    "damage": 25,
+    "cooldown": 2.3,
+    "dps": 10.87
+  },
+  {
+    "type": "Water",
+    "name": "Water Gun",
+    "cname": "水槍",
+    "energy": 7,
+    "damage": 6,
+    "cooldown": 0.5,
+    "dps": 12
+  },
+  {
+    "type": "Water",
+    "name": "Splash",
+    "cname": "水濺躍",
+    "energy": 7,
+    "damage": 0,
+    "cooldown": 1.23,
+    "dps": 0
+  },
+  {
+    "type": "Ice",
+    "name": "Ice Shard",
+    "cname": "冰粒",
+    "energy": 7,
+    "damage": 15,
+    "cooldown": 1.4,
+    "dps": 10.71
+  },
+  {
+    "type": "Ice",
+    "name": "Frost Breath",
+    "cname": "寒冰吹襲",
+    "energy": 7,
+    "damage": 9,
+    "cooldown": 0.81,
+    "dps": 11.11
+  },
+  {
+    "type": "Fire",
+    "name": "Ember",
+    "cname": "火花",
+    "energy": 7,
+    "damage": 10,
+    "cooldown": 1.05,
+    "dps": 9.52
+  },
+  {
+    "type": "Fire",
+    "name": "Fire Fang",
+    "cname": "焰牙",
+    "energy": 4,
+    "damage": 10,
+    "cooldown": 0.84,
+    "dps": 11.9
+  },
+  {
+    "type": "Electric",
+    "name": "Spark",
+    "cname": "閃電",
+    "energy": 4,
+    "damage": 7,
+    "cooldown": 0.7,
+    "dps": 10
+  },
+  {
+    "type": "Electric",
+    "name": "Thunder Shock",
+    "cname": "電擊",
+    "energy": 7,
+    "damage": 5,
+    "cooldown": 0.6,
+    "dps": 8.33
+  },
+  {
+    "type": "Ground",
+    "name": "Mud Slap",
+    "cname": "泥漿拍打",
+    "energy": 9,
+    "damage": 15,
+    "cooldown": 1.35,
+    "dps": 11.11
+  },
+  {
+    "type": "Ground",
+    "name": "Mud Shot",
+    "cname": "泥漿噴射",
+    "energy": 7,
+    "damage": 6,
+    "cooldown": 0.55,
+    "dps": 10.91
+  },
+  {
+    "type": "Grass",
+    "name": "Razor Leaf",
+    "cname": "飛葉快刀",
+    "energy": 7,
+    "damage": 15,
+    "cooldown": 1.45,
+    "dps": 10.34
+  },
+  {
+    "type": "Grass",
+    "name": "Vine Whip",
+    "cname": "藤鞭",
+    "energy": 7,
+    "damage": 7,
+    "cooldown": 0.65,
+    "dps": 10.77
+  },
+  {
+    "type": "Rock",
+    "name": "Rock Throw",
+    "cname": "岩石投擲",
+    "energy": 7,
+    "damage": 12,
+    "cooldown": 1.36,
+    "dps": 8.82
+  },
+  {
+    "type": "Bug",
+    "name": "Fury Cutter",
+    "cname": "快速切斷",
+    "energy": 12,
+    "damage": 3,
+    "cooldown": 0.4,
+    "dps": 7.5
+  },
+  {
+    "type": "Bug",
+    "name": "Bug Bite",
+    "cname": "蟲咬",
+    "energy": 7,
+    "damage": 5,
+    "cooldown": 0.45,
+    "dps": 11.11
+  },
+  {
+    "type": "Poison",
+    "name": "Poison Jab",
+    "cname": "毒刺",
+    "energy": 7,
+    "damage": 12,
+    "cooldown": 1.05,
+    "dps": 11.43
+  },
+  {
+    "type": "Poison",
+    "name": "Acid",
+    "cname": "溶解液",
+    "energy": 7,
+    "damage": 10,
+    "cooldown": 1.05,
+    "dps": 9.52
+  },
+  {
+    "type": "Poison",
+    "name": "Poison Sting",
+    "cname": "毒針",
+    "energy": 4,
+    "damage": 6,
+    "cooldown": 0.58,
+    "dps": 10.43
+  },
+  {
+    "type": "Flying",
+    "name": "Peck",
+    "cname": "啄",
+    "energy": 10,
+    "damage": 10,
+    "cooldown": 1.5,
+    "dps": 6.67
+  },
+  {
+    "type": "Flying",
+    "name": "Wing Attack",
+    "cname": "翅膀攻擊",
+    "energy": 7,
+    "damage": 9,
+    "cooldown": 0.75,
+    "dps": 12
+  },
+  {
+    "type": "Ghost",
+    "name": "Shadow Claw",
+    "cname": "影爪",
+    "energy": 7,
+    "damage": 11,
+    "cooldown": 0.95,
+    "dps": 11.58
+  },
+  {
+    "type": "Ghost",
+    "name": "Lick",
+    "cname": "舔舌頭",
+    "energy": 7,
+    "damage": 5,
+    "cooldown": 0.5,
+    "dps": 10
+  },
+  {
+    "type": "Dark",
+    "name": "Bite",
+    "cname": "撕咬",
+    "energy": 7,
+    "damage": 6,
+    "cooldown": 0.5,
+    "dps": 12
+  },
+  {
+    "type": "Dark",
+    "name": "Feint Attack",
+    "cname": "虛像攻擊",
+    "energy": 7,
+    "damage": 12,
+    "cooldown": 1.04,
+    "dps": 11.54
+  },
+  {
+    "type": "Dark",
+    "name": "Sucker Punch",
+    "cname": "突襲",
+    "energy": 4,
+    "damage": 7,
+    "cooldown": 0.7,
+    "dps": 10
+  },
+  {
+    "type": "Psychic",
+    "name": "Psycho Cut",
+    "cname": "幻象斬",
+    "energy": 7,
+    "damage": 8,
+    "cooldown": 0.57,
+    "dps": 14.04
+  },
+  {
+    "type": "Psychic",
+    "name": "Confusion",
+    "cname": "念力",
+    "energy": 7,
+    "damage": 15,
+    "cooldown": 1.51,
+    "dps": 9.93
+  },
+  {
+    "type": "Psychic",
+    "name": "Zen Headbutt",
+    "cname": "意念頭槌",
+    "energy": 4,
+    "damage": 12,
+    "cooldown": 1.05,
+    "dps": 11.43
+  },
+  {
+    "type": "Dragon",
+    "name": "Dragon Breath",
+    "cname": "龍之息",
+    "energy": 7,
+    "damage": 6,
+    "cooldown": 0.5,
+    "dps": 12
+  }
+]
