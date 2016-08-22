@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"os"
 	"strings"
 
@@ -19,6 +20,10 @@ const (
 	BOT_TOKEN    = ""
 	PAGE_TOKEN   = ""
 	FBMessageURI = "https://graph.facebook.com/v2.6/me/messages?access_token=" + PAGE_TOKEN
+
+	TG_TOKEN      = ""
+	TG_APIROOT    = "https://api.telegram.org/bot" + TG_TOKEN
+	TG_MessageURI = TG_APIROOT + "/sendMessage"
 )
 
 type FBObject struct {
@@ -52,6 +57,34 @@ type FBMessageContent struct {
 	Seq  int64  `json:"seq,omitempty"`
 }
 
+type TGEntry struct {
+	Id      int64     `json:"update_id"`
+	Message TGMessage `json:"message"`
+}
+
+type TGUser struct {
+	Id        int64  `json:"id"`
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Username  string `json:"username"`
+}
+
+type TGChat struct {
+	Id        int64  `json:"id"`
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Username  string `json:"username"`
+	Type      string `json:"type"`
+}
+
+type TGMessage struct {
+	Id        int64  `json:"message_id"`
+	Timestamp int64  `json:"date"`
+	From      TGUser `json:"from"`
+	Chat      TGChat `json:"chat"`
+	Text      string `json:"text"`
+}
+
 type PokemonSkill struct {
 	Type     string
 	Name     string
@@ -67,6 +100,7 @@ var chargedSkills []PokemonSkill = []PokemonSkill{}
 
 func init() {
 	http.HandleFunc("/", handler)
+	http.HandleFunc("/tgCallback", tgCBHandler)
 	http.HandleFunc("/fbCallback", fbCBHandler)
 }
 
@@ -96,6 +130,60 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 	log.Infof(ctx, "%+v", chargedSkills)
 	f.Close()
+}
+
+func tgSendTextMessage(ctx context.Context, chatId int64, text string) (err error) {
+	v := url.Values{}
+	v.Set("chat_id", fmt.Sprintf("%d", chatId))
+	v.Set("text", text)
+
+	url := TG_MessageURI + fmt.Sprintf("?%s", v.Encode())
+	log.Debugf(ctx, "Url: %s", url)
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		return
+	}
+
+	tr := &urlfetch.Transport{Context: ctx}
+	resp, err := tr.RoundTrip(req)
+	if err != nil {
+		return
+	}
+
+	if resp.StatusCode != 200 {
+		log.Infof(ctx, "Deliver status: %s", resp.Status)
+		buffer := bytes.NewBuffer([]byte{})
+		_, err = io.Copy(buffer, resp.Body)
+		log.Infof(ctx, buffer.String())
+	}
+	return
+}
+
+func tgCBHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := appengine.NewContext(r)
+	var tgEntry TGEntry
+
+	d := json.NewDecoder(r.Body)
+	err := d.Decode(&tgEntry)
+	if err != nil {
+		log.Errorf(ctx, "%s", err.Error())
+		http.Error(w, "can not parse tg entry", http.StatusInternalServerError)
+	}
+
+	text := tgEntry.Message.Text
+	if text != "" {
+		skills := querySkill(text)
+		returnText := formatSkills(skills)
+
+		err := tgSendTextMessage(ctx, tgEntry.Message.Chat.Id, returnText)
+		if err != nil {
+			log.Errorf(ctx, "%s", err.Error())
+			http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
+		}
+	}
+
+	log.Infof(ctx, "%+v", tgEntry)
+	fmt.Fprint(w, "")
 }
 
 func fbSendTextMessage(ctx context.Context, sender string, text string) (err error) {
@@ -148,6 +236,21 @@ func querySkill(skillName string) []PokemonSkill {
 		}
 	}
 	return skills
+}
+
+func formatSkills(skills []PokemonSkill) string {
+	if numSkill := len(skills); numSkill == 0 {
+		return "什麼也沒找到"
+	} else if numSkill == 1 {
+		s := skills[0]
+		return fmt.Sprintf("%s (%s)\nDPS: %.2f", s.Name, s.Cname, s.Dps)
+	} else {
+		buf := bytes.NewBuffer([]byte{})
+		for i, s := range skills {
+			fmt.Fprintf(buf, "%d) %s (%s)\n-> DPS: %.2f\n", i+1, s.Name, s.Cname, s.Dps)
+		}
+		return buf.String()
+	}
 }
 
 func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
