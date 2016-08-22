@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
+	"strings"
 
 	"golang.org/x/net/context"
 	"google.golang.org/appengine"
@@ -50,6 +52,19 @@ type FBMessageContent struct {
 	Seq  int64  `json:"seq,omitempty"`
 }
 
+type PokemonSkill struct {
+	Type     string
+	Name     string
+	Cname    string
+	Damage   float64
+	Cooldown float64
+	Energy   float64
+	Dps      float64
+}
+
+var fastSkills []PokemonSkill = []PokemonSkill{}
+var chargedSkills []PokemonSkill = []PokemonSkill{}
+
 func init() {
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/fbCallback", fbCBHandler)
@@ -57,13 +72,37 @@ func init() {
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Hi, this is an FB Bot for PokéDict.")
+	ctx := appengine.NewContext(r)
+	f, err := os.Open("data/fastSkill.json")
+	if err != nil {
+		log.Errorf(ctx, err.Error())
+	}
+	d := json.NewDecoder(f)
+	err = d.Decode(&fastSkills)
+	if err != nil {
+		log.Errorf(ctx, err.Error())
+	}
+	log.Infof(ctx, "%+v", fastSkills)
+	f.Close()
+
+	f, err = os.Open("data/chargeSkill.json")
+	if err != nil {
+		log.Errorf(ctx, err.Error())
+	}
+	d = json.NewDecoder(f)
+	err = d.Decode(&chargedSkills)
+	if err != nil {
+		log.Errorf(ctx, err.Error())
+	}
+	log.Infof(ctx, "%+v", chargedSkills)
+	f.Close()
 }
 
 func fbSendTextMessage(ctx context.Context, sender string, text string) (err error) {
 	payload := FBMessage{
 		Recipient: FBRecipient{sender},
 		Content: FBMessageContent{
-			Text: "hahahahah",
+			Text: text,
 		},
 	}
 
@@ -72,8 +111,7 @@ func fbSendTextMessage(ctx context.Context, sender string, text string) (err err
 		return
 	}
 
-	log.Infof(ctx, "FBMessageURI %s", FBMessageURI)
-	log.Infof(ctx, "Payload %s", b)
+	log.Debugf(ctx, "Payload %s", b)
 	req, err := http.NewRequest("POST", FBMessageURI, bytes.NewBuffer(b))
 	if err != nil {
 		return
@@ -95,6 +133,23 @@ func fbSendTextMessage(ctx context.Context, sender string, text string) (err err
 	return
 }
 
+func querySkill(skillName string) []PokemonSkill {
+	skills := make([]PokemonSkill, 0)
+
+	for _, fs := range fastSkills {
+
+		if strings.Contains(strings.ToLower(fs.Name), strings.ToLower(skillName)) {
+			skills = append(skills, fs)
+		}
+	}
+	for _, cs := range chargedSkills {
+		if strings.Contains(strings.ToLower(cs.Name), strings.ToLower(skillName)) {
+			skills = append(skills, cs)
+		}
+	}
+	return skills
+}
+
 func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	ctx := appengine.NewContext(r)
@@ -109,14 +164,47 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fbMessages := fbObject.Entry[0].Messaging
+	log.Infof(ctx, "%+v", fbMessages)
+
 	for _, fbMsg := range fbMessages {
 		sender := fbMsg.Sender.Id
-		if text := fbMsg.Content.Text; text != "" {
-			err := fbSendTextMessage(ctx, sender, text)
-			if err != nil {
-				log.Errorf(ctx, "%s", err.Error())
-				http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
+		log.Infof(ctx, "%+v", fbMsg)
+		text := fbMsg.Content.Text
+		if text != "" {
+			skills := querySkill(text)
+
+			if numSkill := len(skills); numSkill == 0 {
+				err := fbSendTextMessage(ctx, sender, "什麼也沒找到")
+				if err != nil {
+					log.Errorf(ctx, "%s", err.Error())
+					http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
+				}
+
+			} else if numSkill == 1 {
+				s := skills[0]
+				text := fmt.Sprintf("%s (%s)\nDPS: %.2f", s.Name, s.Cname, s.Dps)
+				err := fbSendTextMessage(ctx, sender, text)
+				if err != nil {
+					log.Errorf(ctx, "%s", err.Error())
+					http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
+				}
+			} else {
+				buf := bytes.NewBuffer([]byte{})
+				for i, s := range skills {
+					fmt.Fprintf(buf, "%d) %s (%s)\n-> DPS: %.2f\n", i+1, s.Name, s.Cname, s.Dps)
+				}
+				err := fbSendTextMessage(ctx, sender, buf.String())
+				if err != nil {
+					log.Errorf(ctx, "%s", err.Error())
+					http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
+				}
 			}
+		} else {
+			// err := fbSendTextMessage(ctx, sender, "你什麼也沒打")
+			// if err != nil {
+			// 	log.Errorf(ctx, "%s", err.Error())
+			// 	http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
+			// }
 		}
 	}
 	fmt.Fprint(w, "")
