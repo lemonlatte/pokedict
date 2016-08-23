@@ -274,33 +274,15 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 		log.Infof(ctx, "%+v", fbMsg)
 		text := fbMsg.Content.Text
 		if text != "" {
+			var err error
+
 			skills := querySkill(text)
+			returnText := formatSkills(skills)
+			err = fbSendTextMessage(ctx, sender, returnText)
 
-			if numSkill := len(skills); numSkill == 0 {
-				err := fbSendTextMessage(ctx, sender, "什麼也沒找到")
-				if err != nil {
-					log.Errorf(ctx, "%s", err.Error())
-					http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
-				}
-
-			} else if numSkill == 1 {
-				s := skills[0]
-				text := fmt.Sprintf("%s (%s)\nDPS: %.2f", s.Name, s.Cname, s.Dps)
-				err := fbSendTextMessage(ctx, sender, text)
-				if err != nil {
-					log.Errorf(ctx, "%s", err.Error())
-					http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
-				}
-			} else {
-				buf := bytes.NewBuffer([]byte{})
-				for i, s := range skills {
-					fmt.Fprintf(buf, "%d) %s (%s)\n-> DPS: %.2f\n", i+1, s.Name, s.Cname, s.Dps)
-				}
-				err := fbSendTextMessage(ctx, sender, buf.String())
-				if err != nil {
-					log.Errorf(ctx, "%s", err.Error())
-					http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
-				}
+			if err != nil {
+				log.Errorf(ctx, "%s", err.Error())
+				http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
 			}
 		} else {
 			// err := fbSendTextMessage(ctx, sender, "你什麼也沒打")
