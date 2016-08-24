@@ -12,6 +12,7 @@ import (
 
 	"golang.org/x/net/context"
 	"google.golang.org/appengine"
+	"google.golang.org/appengine/datastore"
 	"google.golang.org/appengine/log"
 	"google.golang.org/appengine/urlfetch"
 )
@@ -86,6 +87,7 @@ type TGMessage struct {
 }
 
 type PokemonSkill struct {
+	Kind     string
 	Type     string
 	Name     string
 	Cname    string
@@ -95,8 +97,7 @@ type PokemonSkill struct {
 	Dps      float64
 }
 
-var fastSkills []PokemonSkill = []PokemonSkill{}
-var chargedSkills []PokemonSkill = []PokemonSkill{}
+var skillList []PokemonSkill = []PokemonSkill{}
 
 func init() {
 	http.HandleFunc("/", handler)
@@ -107,11 +108,16 @@ func init() {
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Hi, this is an FB Bot for PokéDict.")
 	ctx := appengine.NewContext(r)
+	skillKeys := []*datastore.Key{}
+	skillList = []PokemonSkill{}
+
 	f, err := os.Open("data/fastSkill.json")
 	if err != nil {
 		log.Errorf(ctx, err.Error())
 	}
 	d := json.NewDecoder(f)
+
+	fastSkills := []PokemonSkill{}
 	err = d.Decode(&fastSkills)
 	if err != nil {
 		log.Errorf(ctx, err.Error())
@@ -119,17 +125,37 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	log.Infof(ctx, "%+v", fastSkills)
 	f.Close()
 
+	for _, skill := range fastSkills {
+		skill.Kind = "fast"
+		skillKeys = append(skillKeys, datastore.NewKey(ctx, "PokemonSkill", skill.Name, 0, nil))
+		skillList = append(skillList, skill)
+	}
+
 	f, err = os.Open("data/chargeSkill.json")
 	if err != nil {
 		log.Errorf(ctx, err.Error())
 	}
 	d = json.NewDecoder(f)
+
+	chargedSkills := []PokemonSkill{}
 	err = d.Decode(&chargedSkills)
 	if err != nil {
 		log.Errorf(ctx, err.Error())
 	}
 	log.Infof(ctx, "%+v", chargedSkills)
 	f.Close()
+
+	for _, skill := range chargedSkills {
+		skill.Kind = "charged"
+		skillKeys = append(skillKeys, datastore.NewKey(ctx, "PokemonSkill", skill.Name, 0, nil))
+		skillList = append(skillList, skill)
+	}
+
+	_, err = datastore.PutMulti(ctx, skillKeys, skillList)
+	if err != nil {
+		log.Errorf(ctx, err.Error())
+	}
+	return
 }
 
 func tgSendTextMessage(ctx context.Context, chatId int64, text string) (err error) {
@@ -222,20 +248,13 @@ func fbSendTextMessage(ctx context.Context, sender string, text string) (err err
 }
 
 func querySkill(skillName string) []PokemonSkill {
-	skills := make([]PokemonSkill, 0)
-
-	for _, fs := range fastSkills {
-
-		if strings.Contains(strings.ToLower(fs.Name), strings.ToLower(skillName)) {
-			skills = append(skills, fs)
+	foundSkills := make([]PokemonSkill, 0)
+	for _, s := range skillList {
+		if strings.Contains(strings.ToLower(s.Name), strings.ToLower(skillName)) {
+			foundSkills = append(foundSkills, s)
 		}
 	}
-	for _, cs := range chargedSkills {
-		if strings.Contains(strings.ToLower(cs.Name), strings.ToLower(skillName)) {
-			skills = append(skills, cs)
-		}
-	}
-	return skills
+	return foundSkills
 }
 
 func formatSkills(skills []PokemonSkill) string {
