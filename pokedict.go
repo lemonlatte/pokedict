@@ -109,7 +109,6 @@ func loadSkillData(ctx context.Context) {
 	if err != nil {
 		log.Errorf(ctx, err.Error())
 	}
-	log.Infof(ctx, "%+v", fastSkills)
 	f.Close()
 
 	for i, skill := range fastSkills {
@@ -130,7 +129,6 @@ func loadSkillData(ctx context.Context) {
 	if err != nil {
 		log.Errorf(ctx, err.Error())
 	}
-	log.Infof(ctx, "%+v", chargedSkills)
 	f.Close()
 
 	for i, skill := range chargedSkills {
@@ -140,6 +138,7 @@ func loadSkillData(ctx context.Context) {
 		skillList = append(skillList, skill)
 	}
 
+	log.Debugf(ctx, "%+v", skillList)
 	_, err = datastore.PutMulti(ctx, skillKeys, skillList)
 	if err != nil {
 		log.Errorf(ctx, err.Error())
@@ -280,11 +279,11 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fbMessages := fbObject.Entry[0].Messaging
-	log.Infof(ctx, "%+v", fbMessages)
+	log.Debugf(ctx, "%+v", fbMessages)
 
 	for _, fbMsg := range fbMessages {
 		senderId := fbMsg.Sender.Id
-		log.Infof(ctx, "%+v", fbMsg)
+		log.Debugf(ctx, "%+v", fbMsg)
 		text := fbMsg.Content.Text
 		if text != "" {
 			var err error
