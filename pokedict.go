@@ -89,9 +89,9 @@ type TGMessage struct {
 var skillList []PokemonSkill = []PokemonSkill{}
 
 func init() {
-	http.HandleFunc("/", handler)
 	http.HandleFunc("/tgCallback", tgCBHandler)
 	http.HandleFunc("/fbCallback", fbCBHandler)
+	http.HandleFunc("/", handler)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
