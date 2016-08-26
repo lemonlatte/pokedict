@@ -86,17 +86,6 @@ type TGMessage struct {
 	Text      string `json:"text"`
 }
 
-type PokemonSkill struct {
-	Kind     string
-	Type     string
-	Name     string
-	Cname    string
-	Damage   float64
-	Cooldown float64
-	Energy   float64
-	Dps      float64
-}
-
 var skillList []PokemonSkill = []PokemonSkill{}
 
 func init() {
