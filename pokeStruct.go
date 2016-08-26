@@ -1,7 +1,7 @@
 package pokedict
 
 type PokemonSkill struct {
-	Id       int
+	Id       int64
 	Kind     string
 	Type     string
 	Name     string
@@ -13,11 +13,11 @@ type PokemonSkill struct {
 }
 
 type Pokemon struct {
-	Id             int "json:,string"
+	Id             int64 "json:,string"
 	Classification string
 	Name           string
 	Cname          string
-	MaxCP          int
+	MaxCP          int64
 	TypeI          string `json:"Type I"`
 	TypeII         string `json:"Type II,omitempty"`
 	Weaknesses     []string

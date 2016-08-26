@@ -112,7 +112,8 @@ func loadSkillData(ctx context.Context) {
 	log.Infof(ctx, "%+v", fastSkills)
 	f.Close()
 
-	for _, skill := range fastSkills {
+	for i, skill := range fastSkills {
+		skill.Id = int64(i)
 		skill.Kind = "fast"
 		skillKeys = append(skillKeys, datastore.NewKey(ctx, "PokemonSkill", skill.Name, 0, nil))
 		skillList = append(skillList, skill)
@@ -132,7 +133,8 @@ func loadSkillData(ctx context.Context) {
 	log.Infof(ctx, "%+v", chargedSkills)
 	f.Close()
 
-	for _, skill := range chargedSkills {
+	for i, skill := range chargedSkills {
+		skill.Id = int64(i) + 1000
 		skill.Kind = "charged"
 		skillKeys = append(skillKeys, datastore.NewKey(ctx, "PokemonSkill", skill.Name, 0, nil))
 		skillList = append(skillList, skill)
