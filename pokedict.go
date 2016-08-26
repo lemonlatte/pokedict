@@ -94,9 +94,7 @@ func init() {
 	http.HandleFunc("/", handler)
 }
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hi, this is an FB Bot for PokéDict.")
-	ctx := appengine.NewContext(r)
+func loadSkillData(ctx context.Context) {
 	skillKeys := []*datastore.Key{}
 	skillList = []PokemonSkill{}
 
@@ -144,7 +142,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Errorf(ctx, err.Error())
 	}
-	return
+}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "Hi, this is an FB Bot for PokéDict.")
+	ctx := appengine.NewContext(r)
+	loadSkillData(ctx)
 }
 
 func tgSendTextMessage(ctx context.Context, chatId int64, text string) (err error) {
