@@ -39,11 +39,11 @@ type FBEntry struct {
 }
 
 type FBSender struct {
-	Id string `json:"id"`
+	Id int64 `json:"id,string"`
 }
 
 type FBRecipient struct {
-	Id string `json:"id"`
+	Id int64 `json:"id,string"`
 }
 
 type FBMessage struct {
@@ -206,9 +206,9 @@ func tgCBHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "")
 }
 
-func fbSendTextMessage(ctx context.Context, sender string, text string) (err error) {
+func fbSendTextMessage(ctx context.Context, senderId int64, text string) (err error) {
 	payload := FBMessage{
-		Recipient: FBRecipient{sender},
+		Recipient: FBRecipient{senderId},
 		Content: FBMessageContent{
 			Text: text,
 		},
@@ -283,7 +283,7 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 	log.Infof(ctx, "%+v", fbMessages)
 
 	for _, fbMsg := range fbMessages {
-		sender := fbMsg.Sender.Id
+		senderId := fbMsg.Sender.Id
 		log.Infof(ctx, "%+v", fbMsg)
 		text := fbMsg.Content.Text
 		if text != "" {
@@ -291,7 +291,7 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 
 			skills := querySkill(text)
 			returnText := formatSkills(skills)
-			err = fbSendTextMessage(ctx, sender, returnText)
+			err = fbSendTextMessage(ctx, senderId, returnText)
 
 			if err != nil {
 				log.Errorf(ctx, "%s", err.Error())
