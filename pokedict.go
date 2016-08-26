@@ -289,10 +289,17 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 		if text != "" {
 			var err error
 
-			skills := querySkill(text)
-			returnText := formatSkills(skills)
-			err = fbSendTextMessage(ctx, senderId, returnText)
-
+			switch strings.ToLower(text) {
+			case "get started":
+				fallthrough
+			case "hi", "hello", "你好", "您好":
+				returnText := `你好，歡迎使用 PokéDict。請輸入任何遊戲內容，機器人會為您搜尋適當的神奇寶貝資訊。`
+				err = fbSendTextMessage(ctx, senderId, returnText)
+			default:
+				skills := querySkill(text)
+				returnText := formatSkills(skills)
+				err = fbSendTextMessage(ctx, senderId, returnText)
+			}
 			if err != nil {
 				log.Errorf(ctx, "%s", err.Error())
 				http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
