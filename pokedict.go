@@ -86,6 +86,13 @@ type TGMessage struct {
 	Text      string `json:"text"`
 }
 
+type User struct {
+	Id                int64
+	LastText          string
+	FollowedPokemonId []int64
+}
+
+var users map[int64]*User = map[int64]*User{}
 var skillList []PokemonSkill = []PokemonSkill{}
 
 func init() {
@@ -283,6 +290,13 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 
 	for _, fbMsg := range fbMessages {
 		senderId := fbMsg.Sender.Id
+		user, ok := users[senderId]
+		if !ok {
+			user = &User{
+				Id: senderId,
+			}
+			users[senderId] = user
+		}
 		log.Debugf(ctx, "%+v", fbMsg)
 		text := fbMsg.Content.Text
 		if text != "" {
@@ -303,6 +317,7 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 				log.Errorf(ctx, "%s", err.Error())
 				http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
 			}
+			user.LastText = text
 		} else {
 			// err := fbSendTextMessage(ctx, sender, "你什麼也沒打")
 			// if err != nil {
