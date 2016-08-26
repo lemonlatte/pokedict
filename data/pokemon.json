@@ -1,0 +1,3389 @@
+[
+  {
+    "Id": 1,
+    "Classification": "Seed Pokemon",
+    "Name": "Bulbasaur",
+    "Cname": "妙蛙種子",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Tackle",
+      "Vine Whip"
+    ],
+    "Special Attack(s)": [
+      "Power Whip",
+      "Seed Bomb",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 2,
+    "Classification": "Seed Pokemon",
+    "Name": "Ivysaur",
+    "Cname": "妙蛙草",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Razor Leaf",
+      "Vine Whip"
+    ],
+    "Special Attack(s)": [
+      "Power Whip",
+      "Sludge Bomb",
+      "Solar Beam"
+    ]
+  },
+  {
+    "Id": 3,
+    "Classification": "Seed Pokemon",
+    "Name": "Venusaur",
+    "Cname": "妙蛙花",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Razor Leaf",
+      "Vine Whip"
+    ],
+    "Special Attack(s)": [
+      "Petal Blizzard",
+      "Sludge Bomb",
+      "Solar Beam"
+    ]
+  },
+  {
+    "Id": 4,
+    "Classification": "Lizard Pokemon",
+    "Name": "Charmander",
+    "Cname": "小火龍",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember",
+      "Scratch"
+    ],
+    "Special Attack(s)": [
+      "Flame Burst",
+      "Flame Charge",
+      "Flamethrower"
+    ]
+  },
+  {
+    "Id": 5,
+    "Classification": "Flame Pokemon",
+    "Name": "Charmeleon",
+    "Cname": "火恐龍",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember",
+      "Scratch"
+    ],
+    "Special Attack(s)": [
+      "Fire Punch",
+      "Flame Burst",
+      "Flamethrower"
+    ]
+  },
+  {
+    "Id": 6,
+    "Classification": "Flame Pokemon",
+    "Name": "Charizard",
+    "Cname": "噴火龍",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Water",
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember",
+      "Wing Attack"
+    ],
+    "Special Attack(s)": [
+      "Dragon Claw",
+      "Fire Blast",
+      "Flamethrower"
+    ]
+  },
+  {
+    "Id": 7,
+    "Classification": "Tiny Turtle Pokemon",
+    "Name": "Squirtle",
+    "Cname": "傑尼龜",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Bubble",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Aqua Jet",
+      "Aqua Tail",
+      "Water Pulse"
+    ]
+  },
+  {
+    "Id": 8,
+    "Classification": "Turtle Pokemon",
+    "Name": "Wartortle",
+    "Cname": "卡咪龜",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Aqua Jet",
+      "Hydro Pump",
+      "Ice Beam"
+    ]
+  },
+  {
+    "Id": 9,
+    "Classification": "Shellfish Pokemon",
+    "Name": "Blastoise",
+    "Cname": "水箭龜",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Flash Cannon",
+      "Hydro Pump",
+      "Ice Beam"
+    ]
+  },
+  {
+    "Id": 10,
+    "Classification": "Worm Pokemon",
+    "Name": "Caterpie",
+    "Cname": "綠毛蟲",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Weaknesses": [
+      "Fire",
+      "Flying",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Struggle"
+    ]
+  },
+  {
+    "Id": 11,
+    "Classification": "Cocoon Pokemon",
+    "Name": "Metapod",
+    "Cname": "鐵甲蛹",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Weaknesses": [
+      "Fire",
+      "Flying",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Struggle"
+    ]
+  },
+  {
+    "Id": 12,
+    "Classification": "Butterfly Pokemon",
+    "Name": "Butterfree",
+    "Cname": "巴大蝴",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Fire",
+      "Electric",
+      "Ice",
+      "Flying",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Confusion"
+    ],
+    "Special Attack(s)": [
+      "Bug Buzz",
+      "Psychic",
+      "Signal Beam"
+    ]
+  },
+  {
+    "Id": 13,
+    "Classification": "Hairy Pokemon",
+    "Name": "Weedle",
+    "Cname": "獨角蟲",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Flying",
+      "Psychic",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Poison Sting"
+    ],
+    "Special Attack(s)": [
+      "Struggle"
+    ]
+  },
+  {
+    "Id": 14,
+    "Classification": "Cocoon Pokemon",
+    "Name": "Kakuna",
+    "Cname": "鐵殼昆",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Flying",
+      "Psychic",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Poison Sting"
+    ],
+    "Special Attack(s)": [
+      "Struggle"
+    ]
+  },
+  {
+    "Id": 15,
+    "Classification": "Poison Bee Pokemon",
+    "Name": "Beedrill",
+    "Cname": "大針蜂",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Flying",
+      "Psychic",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Poison Jab"
+    ],
+    "Special Attack(s)": [
+      "Aerial Ace",
+      "Sludge Bomb",
+      "X Scissor"
+    ]
+  },
+  {
+    "Id": 16,
+    "Classification": "Tiny Bird Pokemon",
+    "Name": "Pidgey",
+    "Cname": "波波",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Quick Attack",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Aerial Ace",
+      "Air Cutter",
+      "Twister"
+    ]
+  },
+  {
+    "Id": 17,
+    "Classification": "Bird Pokemon",
+    "Name": "Pidgeotto",
+    "Cname": "比比鳥",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Steel Wing",
+      "Wing Attack"
+    ],
+    "Special Attack(s)": [
+      "Aerial Ace",
+      "Air Cutter",
+      "Twister"
+    ]
+  },
+  {
+    "Id": 18,
+    "Classification": "Bird Pokemon",
+    "Name": "Pidgeot",
+    "Cname": "比鵰",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Steel Wing",
+      "Wing Attack"
+    ],
+    "Special Attack(s)": [
+      "Aerial Ace",
+      "Air Cutter",
+      "Hurricane"
+    ]
+  },
+  {
+    "Id": 19,
+    "Classification": "Mouse Pokemon",
+    "Name": "Rattata",
+    "Cname": "小拉達",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Quick Attack",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Dig",
+      "Hyper Fang"
+    ]
+  },
+  {
+    "Id": 20,
+    "Classification": "Mouse Pokemon",
+    "Name": "Raticate",
+    "Cname": "拉達",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Quick Attack"
+    ],
+    "Special Attack(s)": [
+      "Dig",
+      "Hyper Beam",
+      "Hyper Fang"
+    ]
+  },
+  {
+    "Id": 21,
+    "Classification": "Tiny Bird Pokemon",
+    "Name": "Spearow",
+    "Cname": "烈雀",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Peck",
+      "Quick Attack"
+    ],
+    "Special Attack(s)": [
+      "Aerial Ace",
+      "Drill Peck",
+      "Twister"
+    ]
+  },
+  {
+    "Id": 22,
+    "Classification": "Beak Pokemon",
+    "Name": "Fearow",
+    "Cname": "大嘴雀",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Peck",
+      "Steel Wing"
+    ],
+    "Special Attack(s)": [
+      "Aerial Ace",
+      "Drill Run",
+      "Twister"
+    ]
+  },
+  {
+    "Id": 23,
+    "Classification": "Snake Pokemon",
+    "Name": "Ekans",
+    "Cname": "阿柏蛇",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Poison Sting"
+    ],
+    "Special Attack(s)": [
+      "Gunk Shot",
+      "Sludge Bomb",
+      "Wrap"
+    ]
+  },
+  {
+    "Id": 24,
+    "Classification": "Cobra Pokemon",
+    "Name": "Arbok",
+    "Cname": "阿柏怪",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Bite"
+    ],
+    "Special Attack(s)": [
+      "Dark Pulse",
+      "Gunk Shot",
+      "Sludge Wave"
+    ]
+  },
+  {
+    "Id": 25,
+    "Classification": "Mouse Pokemon",
+    "Name": "Pikachu",
+    "Cname": "皮卡丘",
+    "MaxCP": 0,
+    "Type I": "Electric",
+    "Weaknesses": [
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Quick Attack",
+      "Thunder Shock"
+    ],
+    "Special Attack(s)": [
+      "Discharge",
+      "Thunder",
+      "Thunderbolt"
+    ]
+  },
+  {
+    "Id": 26,
+    "Classification": "Mouse Pokemon",
+    "Name": "Raichu",
+    "Cname": "雷丘",
+    "MaxCP": 0,
+    "Type I": "Electric",
+    "Weaknesses": [
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Spark",
+      "Thunder Shock"
+    ],
+    "Special Attack(s)": [
+      "Brick Break",
+      "Thunder",
+      "Thunder Punch"
+    ]
+  },
+  {
+    "Id": 27,
+    "Classification": "Mouse Pokemon",
+    "Name": "Sandshrew",
+    "Cname": "穿山鼠",
+    "MaxCP": 0,
+    "Type I": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice"
+    ],
+    "Fast Attack(s)": [
+      "Mud Shot",
+      "Scratch"
+    ],
+    "Special Attack(s)": [
+      "Dig",
+      "Rock Slide",
+      "Rock Tomb"
+    ]
+  },
+  {
+    "Id": 28,
+    "Classification": "Mouse Pokemon",
+    "Name": "Sandslash",
+    "Cname": "穿山王",
+    "MaxCP": 0,
+    "Type I": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice"
+    ],
+    "Fast Attack(s)": [
+      "Metal Claw",
+      "Mud Shot"
+    ],
+    "Special Attack(s)": [
+      "Bulldoze",
+      "Earthquake",
+      "Rock Tomb"
+    ]
+  },
+  {
+    "Id": 29,
+    "Classification": "Poison Pin Pokemon",
+    "Name": "Nidoran F",
+    "Cname": "尼多蘭",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Poison Sting"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Poison Fang",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 30,
+    "Classification": "Poison Pin Pokemon",
+    "Name": "Nidorina",
+    "Cname": "尼多娜",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Poison Sting"
+    ],
+    "Special Attack(s)": [
+      "Dig",
+      "Poison Fang",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 31,
+    "Classification": "Drill Pokemon",
+    "Name": "Nidoqueen",
+    "Cname": "尼多后",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Type II": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Ice",
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Poison Jab"
+    ],
+    "Special Attack(s)": [
+      "Earthquake",
+      "Sludge Wave",
+      "Stone Edge"
+    ]
+  },
+  {
+    "Id": 32,
+    "Classification": "Poison Pin Pokemon",
+    "Name": "Nidoran M",
+    "Cname": "尼多朗",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Peck",
+      "Poison Sting"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Horn Attack",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 33,
+    "Classification": "Poison Pin Pokemon",
+    "Name": "Nidorino",
+    "Cname": "尼多力諾",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Poison Jab",
+      "Poison Sting"
+    ],
+    "Special Attack(s)": [
+      "Dig",
+      "Horn Attack",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 34,
+    "Classification": "Drill Pokemon",
+    "Name": "Nidoking",
+    "Cname": "尼多王",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Type II": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Ice",
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Fury Cutter",
+      "Poison Jab"
+    ],
+    "Special Attack(s)": [
+      "Earthquake",
+      "Megahorn",
+      "Sludge Wave"
+    ]
+  },
+  {
+    "Id": 35,
+    "Classification": "Fairy Pokemon",
+    "Name": "Clefairy",
+    "Cname": "皮皮",
+    "MaxCP": 0,
+    "Type I": "Fairy",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Pound",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Disarming Voice",
+      "Moonblast"
+    ]
+  },
+  {
+    "Id": 36,
+    "Classification": "Fairy Pokemon",
+    "Name": "Clefable",
+    "Cname": "皮可西",
+    "MaxCP": 0,
+    "Type I": "Fairy",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Pound",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Dazzling Gleam",
+      "Moonblast",
+      "Psychic"
+    ]
+  },
+  {
+    "Id": 37,
+    "Classification": "Fox Pokemon",
+    "Name": "Vulpix",
+    "Cname": "六尾",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember",
+      "Quick Attack"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Flame Charge",
+      "Flamethrower"
+    ]
+  },
+  {
+    "Id": 38,
+    "Classification": "Fox Pokemon",
+    "Name": "Ninetales",
+    "Cname": "九尾",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember",
+      "Feint Attack"
+    ],
+    "Special Attack(s)": [
+      "Fire Blast",
+      "Flamethrower",
+      "Heat Wave"
+    ]
+  },
+  {
+    "Id": 39,
+    "Classification": "Balloon Pokemon",
+    "Name": "Jigglypuff",
+    "Cname": "胖丁",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Fairy",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Feint Attack",
+      "Pound"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Dazzling Gleam",
+      "Disarming Voice",
+      "Play Rough",
+      "Dazzling Gleam"
+    ]
+  },
+  {
+    "Id": 40,
+    "Classification": "Balloon Pokemon",
+    "Name": "Wigglytuff",
+    "Cname": "胖可丁",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Fairy",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Feint Attack",
+      "Pound"
+    ],
+    "Special Attack(s)": [
+      "Dazzling Gleam",
+      "Hyper Beam",
+      "Play Rough"
+    ]
+  },
+  {
+    "Id": 41,
+    "Classification": "Bat Pokemon",
+    "Name": "Zubat",
+    "Cname": "超音蝠",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Ice",
+      "Psychic",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Quick Attack"
+    ],
+    "Special Attack(s)": [
+      "Air Cutter",
+      "Poison Fang",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 42,
+    "Classification": "Bat Pokemon",
+    "Name": "Golbat",
+    "Cname": "大嘴蝠",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Ice",
+      "Psychic",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Wing Attack"
+    ],
+    "Special Attack(s)": [
+      "Air Cutter",
+      "Ominous Wind",
+      "Poison Fang"
+    ]
+  },
+  {
+    "Id": 43,
+    "Classification": "Weed Pokemon",
+    "Name": "Oddish",
+    "Cname": "走路草",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Razor Leaf"
+    ],
+    "Special Attack(s)": [
+      "Moonblast",
+      "Seed Bomb",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 44,
+    "Classification": "Weed Pokemon",
+    "Name": "Gloom",
+    "Cname": "臭臭花",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Razor Leaf"
+    ],
+    "Special Attack(s)": [
+      "Moonblast",
+      "Petal Blizzard",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 45,
+    "Classification": "Flower Pokemon",
+    "Name": "Vileplume",
+    "Cname": "霸王花",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Razor Leaf"
+    ],
+    "Special Attack(s)": [
+      "Moonblast",
+      "Petal Blizzard",
+      "Solar Beam"
+    ]
+  },
+  {
+    "Id": 46,
+    "Classification": "Mushroom Pokemon",
+    "Name": "Paras",
+    "Cname": "派拉斯",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Type II": "Grass",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Poison",
+      "Flying",
+      "Bug",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Scratch"
+    ],
+    "Special Attack(s)": [
+      "Cross Poison",
+      "Seed Bomb",
+      "X Scissor"
+    ]
+  },
+  {
+    "Id": 47,
+    "Classification": "Mushroom Pokemon",
+    "Name": "Parasect",
+    "Cname": "派拉斯特",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Type II": "Grass",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Poison",
+      "Flying",
+      "Bug",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Fury Cutter"
+    ],
+    "Special Attack(s)": [
+      "Cross Poison",
+      "Solar Beam",
+      "X Scissor"
+    ]
+  },
+  {
+    "Id": 48,
+    "Classification": "Insect Pokemon",
+    "Name": "Venonat",
+    "Cname": "毛球",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Flying",
+      "Psychic",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Confusion"
+    ],
+    "Special Attack(s)": [
+      "Poison Fang",
+      "Psybeam",
+      "Signal Beam"
+    ]
+  },
+  {
+    "Id": 49,
+    "Classification": "Poison Moth Pokemon",
+    "Name": "Venomoth",
+    "Cname": "末入蛾",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Flying",
+      "Psychic",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bug Bite",
+      "Confusion"
+    ],
+    "Special Attack(s)": [
+      "Bug Buzz",
+      "Poison Fang",
+      "Psychic"
+    ]
+  },
+  {
+    "Id": 50,
+    "Classification": "Mole Pokemon",
+    "Name": "Diglett",
+    "Cname": "地鼠",
+    "MaxCP": 0,
+    "Type I": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice"
+    ],
+    "Fast Attack(s)": [
+      "Mud Shot",
+      "Mud Slap",
+      "Scratch"
+    ],
+    "Special Attack(s)": [
+      "Dig",
+      "Mud Bomb",
+      "Rock Tomb"
+    ]
+  },
+  {
+    "Id": 51,
+    "Classification": "Mole Pokemon",
+    "Name": "Dugtrio",
+    "Cname": "三地鼠",
+    "MaxCP": 0,
+    "Type I": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice"
+    ],
+    "Fast Attack(s)": [
+      "Mud Shot",
+      "Mud Slap",
+      "Sucker Punch"
+    ],
+    "Special Attack(s)": [
+      "Earthquake",
+      "Mud Bomb",
+      "Stone Edge"
+    ]
+  },
+  {
+    "Id": 52,
+    "Classification": "Scratch Cat Pokemon",
+    "Name": "Meowth",
+    "Cname": "喵喵",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Scratch"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Dark Pulse",
+      "Night Slash"
+    ]
+  },
+  {
+    "Id": 53,
+    "Classification": "Classy Cat Pokemon",
+    "Name": "Persian",
+    "Cname": "貓老大",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Feint Attack",
+      "Scratch"
+    ],
+    "Special Attack(s)": [
+      "Night Slash",
+      "Play Rough",
+      "Power Gem"
+    ]
+  },
+  {
+    "Id": 54,
+    "Classification": "Duck Pokemon",
+    "Name": "Psyduck",
+    "Cname": "可達鴨",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Water Gun",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Aqua Tail",
+      "Cross Chop",
+      "Psybeam"
+    ]
+  },
+  {
+    "Id": 55,
+    "Classification": "Duck Pokemon",
+    "Name": "Golduck",
+    "Cname": "哥達鴨",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Hydro Pump",
+      "Ice Beam",
+      "Psychic"
+    ]
+  },
+  {
+    "Id": 56,
+    "Classification": "Pig Monkey Pokemon",
+    "Name": "Mankey",
+    "Cname": "猴怪",
+    "MaxCP": 0,
+    "Type I": "Fighting",
+    "Weaknesses": [
+      "Flying",
+      "Psychic",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Karate Chop",
+      "Scratch"
+    ],
+    "Special Attack(s)": [
+      "Brick Break",
+      "Cross Chop",
+      "Low Sweep"
+    ]
+  },
+  {
+    "Id": 57,
+    "Classification": "Pig Monkey Pokemon",
+    "Name": "Primeape",
+    "Cname": "火爆猴",
+    "MaxCP": 0,
+    "Type I": "Fighting",
+    "Weaknesses": [
+      "Flying",
+      "Psychic",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Karate Chop",
+      "Low Kick"
+    ],
+    "Special Attack(s)": [
+      "Cross Chop",
+      "Low Sweep",
+      "Night Slash"
+    ]
+  },
+  {
+    "Id": 58,
+    "Classification": "Puppy Pokemon",
+    "Name": "Growlithe",
+    "Cname": "卡蒂狗",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Ember"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Flame Wheel",
+      "Flamethrower"
+    ]
+  },
+  {
+    "Id": 59,
+    "Classification": "Legendary Pokemon",
+    "Name": "Arcanine",
+    "Cname": "風速狗",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Fire Fang"
+    ],
+    "Special Attack(s)": [
+      "Bulldoze",
+      "Fire Blast",
+      "Flamethrower"
+    ]
+  },
+  {
+    "Id": 60,
+    "Classification": "Tadpole Pokemon",
+    "Name": "Poliwag",
+    "Cname": "蚊香蝌蚪",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Bubble",
+      "Mud Shot"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Bubble Beam",
+      "Mud Bomb"
+    ]
+  },
+  {
+    "Id": 61,
+    "Classification": "Tadpole Pokemon",
+    "Name": "Poliwhirl",
+    "Cname": "蚊香蛙",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Bubble",
+      "Mud Shot"
+    ],
+    "Special Attack(s)": [
+      "Bubble Beam",
+      "Mud Bomb",
+      "Scald"
+    ]
+  },
+  {
+    "Id": 62,
+    "Classification": "Tadpole Pokemon",
+    "Name": "Poliwrath",
+    "Cname": "快泳蛙",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Fighting",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Flying",
+      "Psychic",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Bubble",
+      "Mud Shot"
+    ],
+    "Special Attack(s)": [
+      "Hydro Pump",
+      "Ice Punch",
+      "Submission"
+    ]
+  },
+  {
+    "Id": 63,
+    "Classification": "Psi Pokemon",
+    "Name": "Abra",
+    "Cname": "凱西",
+    "MaxCP": 0,
+    "Type I": "Psychic",
+    "Weaknesses": [
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Psyshock",
+      "Shadow Ball",
+      "Signal Beam"
+    ]
+  },
+  {
+    "Id": 64,
+    "Classification": "Psi Pokemon",
+    "Name": "Kadabra",
+    "Cname": "勇吉拉",
+    "MaxCP": 0,
+    "Type I": "Psychic",
+    "Weaknesses": [
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Psycho Cut"
+    ],
+    "Special Attack(s)": [
+      "Dazzling Gleam",
+      "Psybeam",
+      "Shadow Ball"
+    ]
+  },
+  {
+    "Id": 65,
+    "Classification": "Psi Pokemon",
+    "Name": "Alakazam",
+    "Cname": "胡地",
+    "MaxCP": 0,
+    "Type I": "Psychic",
+    "Weaknesses": [
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Psycho Cut"
+    ],
+    "Special Attack(s)": [
+      "Dazzling Gleam",
+      "Psychic",
+      "Shadow Ball"
+    ]
+  },
+  {
+    "Id": 66,
+    "Classification": "Superpower Pokemon",
+    "Name": "Machop",
+    "Cname": "腕力",
+    "MaxCP": 0,
+    "Type I": "Fighting",
+    "Weaknesses": [
+      "Flying",
+      "Psychic",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Karate Chop",
+      "Low Kick"
+    ],
+    "Special Attack(s)": [
+      "Brick Break",
+      "Cross Chop",
+      "Low Sweep"
+    ]
+  },
+  {
+    "Id": 67,
+    "Classification": "Superpower Pokemon",
+    "Name": "Machoke",
+    "Cname": "豪力",
+    "MaxCP": 0,
+    "Type I": "Fighting",
+    "Weaknesses": [
+      "Flying",
+      "Psychic",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Karate Chop",
+      "Low Kick"
+    ],
+    "Special Attack(s)": [
+      "Brick Break",
+      "Cross Chop",
+      "Submission"
+    ]
+  },
+  {
+    "Id": 68,
+    "Classification": "Superpower Pokemon",
+    "Name": "Machamp",
+    "Cname": "怪力",
+    "MaxCP": 0,
+    "Type I": "Fighting",
+    "Weaknesses": [
+      "Flying",
+      "Psychic",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Bullet Punch",
+      "Karate Chop"
+    ],
+    "Special Attack(s)": [
+      "Cross Chop",
+      "Stone Edge",
+      "Submission"
+    ]
+  },
+  {
+    "Id": 69,
+    "Classification": "Flower Pokemon",
+    "Name": "Bellsprout",
+    "Cname": "喇叭芽",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Vine Whip"
+    ],
+    "Special Attack(s)": [
+      "Power Whip",
+      "Sludge Bomb",
+      "Wrap"
+    ]
+  },
+  {
+    "Id": 70,
+    "Classification": "Flycatcher Pokemon",
+    "Name": "Weepinbell",
+    "Cname": "口呆花",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Razor Leaf"
+    ],
+    "Special Attack(s)": [
+      "Power Whip",
+      "Seed Bomb",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 71,
+    "Classification": "Flycatcher Pokemon",
+    "Name": "Victreebel",
+    "Cname": "大食花",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Razor Leaf"
+    ],
+    "Special Attack(s)": [
+      "Leaf Blade",
+      "Sludge Bomb",
+      "Solar Beam"
+    ]
+  },
+  {
+    "Id": 72,
+    "Classification": "Jellyfish Pokemon",
+    "Name": "Tentacool",
+    "Cname": "瑪瑙水母",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Electric",
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Bubble",
+      "Poison Sting"
+    ],
+    "Special Attack(s)": [
+      "Bubble Beam",
+      "Water Pulse",
+      "Wrap"
+    ]
+  },
+  {
+    "Id": 73,
+    "Classification": "Jellyfish Pokemon",
+    "Name": "Tentacruel",
+    "Cname": "毒刺水母",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Electric",
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Poison Jab"
+    ],
+    "Special Attack(s)": [
+      "Blizzard",
+      "Hydro Pump",
+      "Sludge Wave"
+    ]
+  },
+  {
+    "Id": 74,
+    "Classification": "Rock Pokemon",
+    "Name": "Geodude",
+    "Cname": "小拳石",
+    "MaxCP": 0,
+    "Type I": "Rock",
+    "Type II": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice",
+      "Fighting",
+      "Ground",
+      "Steel"
+    ],
+    "Fast Attack(s)": [
+      "Rock Throw",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Dig",
+      "Rock Slide",
+      "Rock Tomb"
+    ]
+  },
+  {
+    "Id": 75,
+    "Classification": "Rock Pokemon",
+    "Name": "Graveler",
+    "Cname": "隆隆石",
+    "MaxCP": 0,
+    "Type I": "Rock",
+    "Type II": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice",
+      "Fighting",
+      "Ground",
+      "Steel"
+    ],
+    "Fast Attack(s)": [
+      "Mud Shot",
+      "Mud Slap",
+      "Rock Throw"
+    ],
+    "Special Attack(s)": [
+      "Dig",
+      "Rock Slide",
+      "Stone Edge"
+    ]
+  },
+  {
+    "Id": 76,
+    "Classification": "Megaton Pokemon",
+    "Name": "Golem",
+    "Cname": "隆隆岩",
+    "MaxCP": 0,
+    "Type I": "Rock",
+    "Type II": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice",
+      "Fighting",
+      "Ground",
+      "Steel"
+    ],
+    "Fast Attack(s)": [
+      "Mud Shot",
+      "Mud Slap",
+      "Rock Throw"
+    ],
+    "Special Attack(s)": [
+      "Ancient Power",
+      "Earthquake",
+      "Stone Edge"
+    ]
+  },
+  {
+    "Id": 77,
+    "Classification": "Fire Horse Pokemon",
+    "Name": "Ponyta",
+    "Cname": "小火馬",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Fire Blast",
+      "Flame Charge",
+      "Flame Wheel"
+    ]
+  },
+  {
+    "Id": 78,
+    "Classification": "Fire Horse Pokemon",
+    "Name": "Rapidash",
+    "Cname": "烈焰馬",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember",
+      "Low Kick"
+    ],
+    "Special Attack(s)": [
+      "Drill Run",
+      "Fire Blast",
+      "Heat Wave"
+    ]
+  },
+  {
+    "Id": 79,
+    "Classification": "Dopey Pokemon",
+    "Name": "Slowpoke",
+    "Cname": "呆呆獸",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Psychic",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Psychic",
+      "Psyshock",
+      "Water Pulse"
+    ]
+  },
+  {
+    "Id": 80,
+    "Classification": "Hermit Crab Pokemon",
+    "Name": "Slowbro",
+    "Cname": "呆河馬",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Psychic",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Ice Beam",
+      "Psychic",
+      "Water Pulse"
+    ]
+  },
+  {
+    "Id": 81,
+    "Classification": "Magnet Pokemon",
+    "Name": "Magnemite",
+    "Cname": "小磁怪",
+    "MaxCP": 0,
+    "Type I": "Electric",
+    "Type II": "Steel",
+    "Weaknesses": [
+      "Fire",
+      "Water",
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Spark",
+      "Thunder Shock"
+    ],
+    "Special Attack(s)": [
+      "Discharge",
+      "Magnet Bomb",
+      "Thunderbolt"
+    ]
+  },
+  {
+    "Id": 82,
+    "Classification": "Magnet Pokemon",
+    "Name": "Magneton",
+    "Cname": "三合一磁怪",
+    "MaxCP": 0,
+    "Type I": "Electric",
+    "Type II": "Steel",
+    "Weaknesses": [
+      "Fire",
+      "Water",
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Spark",
+      "Thunder Shock"
+    ],
+    "Special Attack(s)": [
+      "Discharge",
+      "Flash Cannon",
+      "Magnet Bomb"
+    ]
+  },
+  {
+    "Id": 83,
+    "Classification": "Wild Duck Pokemon",
+    "Name": "Farfetch'd",
+    "Cname": "大蔥鴨",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Cut",
+      "Fury Cutter"
+    ],
+    "Special Attack(s)": [
+      "Aerial Ace",
+      "Air Cutter",
+      "Leaf Blade"
+    ]
+  },
+  {
+    "Id": 84,
+    "Classification": "Twin Bird Pokemon",
+    "Name": "Doduo",
+    "Cname": "嘟嘟",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Peck",
+      "Quick Attack"
+    ],
+    "Special Attack(s)": [
+      "Aerial Ace",
+      "Drill Peck",
+      "Swift"
+    ]
+  },
+  {
+    "Id": 85,
+    "Classification": "Triple Bird Pokemon",
+    "Name": "Dodrio",
+    "Cname": "嘟嘟利",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Feint Attack",
+      "Steel Wing"
+    ],
+    "Special Attack(s)": [
+      "Aerial Ace",
+      "Air Cutter",
+      "Drill Peck"
+    ]
+  },
+  {
+    "Id": 86,
+    "Classification": "Sea Lion Pokemon",
+    "Name": "Seel",
+    "Cname": "小海獅",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Ice Shard",
+      "Lick",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Aqua Jet",
+      "Aqua Tail",
+      "Icy Wind"
+    ]
+  },
+  {
+    "Id": 87,
+    "Classification": "Sea Lion Pokemon",
+    "Name": "Dewgong",
+    "Cname": "白海獅",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Ice",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Fighting",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Frost Breath",
+      "Ice Shard"
+    ],
+    "Special Attack(s)": [
+      "Aqua Jet",
+      "Blizzard",
+      "Icy Wind"
+    ]
+  },
+  {
+    "Id": 88,
+    "Classification": "Sludge Pokemon",
+    "Name": "Grimer",
+    "Cname": "臭泥",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Mud Slap",
+      "Poison Jab"
+    ],
+    "Special Attack(s)": [
+      "Mud Bomb",
+      "Sludge",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 89,
+    "Classification": "Sludge Pokemon",
+    "Name": "Muk",
+    "Cname": "臭臭泥",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Lick",
+      "Poison Jab"
+    ],
+    "Special Attack(s)": [
+      "Dark Pulse",
+      "Gunk Shot",
+      "Sludge Wave"
+    ]
+  },
+  {
+    "Id": 90,
+    "Classification": "Bivalve Pokemon",
+    "Name": "Shellder",
+    "Cname": "大舌貝",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Ice Shard",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Bubble Beam",
+      "Icy Wind",
+      "Water Pulse"
+    ]
+  },
+  {
+    "Id": 91,
+    "Classification": "Bivalve Pokemon",
+    "Name": "Cloyster",
+    "Cname": "鐵甲貝",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Ice",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Fighting",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Frost Breath",
+      "Ice Shard"
+    ],
+    "Special Attack(s)": [
+      "Blizzard",
+      "Hydro Pump",
+      "Icy Wind"
+    ]
+  },
+  {
+    "Id": 92,
+    "Classification": "Gas Pokemon",
+    "Name": "Gastly",
+    "Cname": "鬼斯",
+    "MaxCP": 0,
+    "Type I": "Ghost",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Lick",
+      "Sucker Punch"
+    ],
+    "Special Attack(s)": [
+      "Dark Pulse",
+      "Ominous Wind",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 93,
+    "Classification": "Gas Pokemon",
+    "Name": "Haunter",
+    "Cname": "鬼斯通",
+    "MaxCP": 0,
+    "Type I": "Ghost",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Lick",
+      "Shadow Claw"
+    ],
+    "Special Attack(s)": [
+      "Dark Pulse",
+      "Shadow Ball",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 94,
+    "Classification": "Shadow Pokemon",
+    "Name": "Gengar",
+    "Cname": "耿鬼",
+    "MaxCP": 0,
+    "Type I": "Ghost",
+    "Type II": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Shadow Claw",
+      "Sucker Punch"
+    ],
+    "Special Attack(s)": [
+      "Dark Pulse",
+      "Shadow Ball",
+      "Sludge Bomb",
+      "Sludge Wave"
+    ]
+  },
+  {
+    "Id": 95,
+    "Classification": "Rock Snake Pokemon",
+    "Name": "Onix",
+    "Cname": "大岩蛇",
+    "MaxCP": 0,
+    "Type I": "Rock",
+    "Type II": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice",
+      "Fighting",
+      "Ground",
+      "Steel"
+    ],
+    "Fast Attack(s)": [
+      "Rock Throw",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Iron Head",
+      "Rock Slide",
+      "Stone Edge"
+    ]
+  },
+  {
+    "Id": 96,
+    "Classification": "Hypnosis Pokemon",
+    "Name": "Drowzee",
+    "Cname": "素利普",
+    "MaxCP": 0,
+    "Type I": "Psychic",
+    "Weaknesses": [
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Pound"
+    ],
+    "Special Attack(s)": [
+      "Psybeam",
+      "Psychic",
+      "Psyshock"
+    ]
+  },
+  {
+    "Id": 97,
+    "Classification": "Hypnosis Pokemon",
+    "Name": "Hypno",
+    "Cname": "素利拍",
+    "MaxCP": 0,
+    "Type I": "Psychic",
+    "Weaknesses": [
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Psychic",
+      "Psyshock",
+      "Shadow Ball"
+    ]
+  },
+  {
+    "Id": 98,
+    "Classification": "River Crab Pokemon",
+    "Name": "Krabby",
+    "Cname": "大鉗蟹",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Bubble",
+      "Mud Shot"
+    ],
+    "Special Attack(s)": [
+      "Bubble Beam",
+      "Vice Grip",
+      "Water Pulse"
+    ]
+  },
+  {
+    "Id": 99,
+    "Classification": "Pincer Pokemon",
+    "Name": "Kingler",
+    "Cname": "巨鉗蟹",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Metal Claw",
+      "Mud Shot"
+    ],
+    "Special Attack(s)": [
+      "Vice Grip",
+      "Water Pulse",
+      "X Scissor"
+    ]
+  },
+  {
+    "Id": 100,
+    "Classification": "Ball Pokemon",
+    "Name": "Voltorb",
+    "Cname": "雷電球",
+    "MaxCP": 0,
+    "Type I": "Electric",
+    "Weaknesses": [
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Spark",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Discharge",
+      "Signal Beam",
+      "Thunderbolt"
+    ]
+  },
+  {
+    "Id": 101,
+    "Classification": "Ball Pokemon",
+    "Name": "Electrode",
+    "Cname": "頑皮彈",
+    "MaxCP": 0,
+    "Type I": "Electric",
+    "Weaknesses": [
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Spark",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Discharge",
+      "Hyper Beam",
+      "Thunderbolt"
+    ]
+  },
+  {
+    "Id": 102,
+    "Classification": "Egg Pokemon",
+    "Name": "Exeggcute",
+    "Cname": "蛋蛋",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Psychic",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Poison",
+      "Flying",
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion"
+    ],
+    "Special Attack(s)": [
+      "Ancient Power",
+      "Psychic",
+      "Seed Bomb"
+    ]
+  },
+  {
+    "Id": 103,
+    "Classification": "Coconut Pokemon",
+    "Name": "Exeggutor",
+    "Cname": "椰蛋樹",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Type II": "Psychic",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Poison",
+      "Flying",
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Psychic",
+      "Seed Bomb",
+      "Solar Beam"
+    ]
+  },
+  {
+    "Id": 104,
+    "Classification": "Lonely Pokemon",
+    "Name": "Cubone",
+    "Cname": "可拉可拉",
+    "MaxCP": 0,
+    "Type I": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice"
+    ],
+    "Fast Attack(s)": [
+      "Mud Slap",
+      "Rock Smash"
+    ],
+    "Special Attack(s)": [
+      "Bone Club",
+      "Bulldoze",
+      "Dig"
+    ]
+  },
+  {
+    "Id": 105,
+    "Classification": "Bone Keeper Pokemon",
+    "Name": "Marowak",
+    "Cname": "嘎拉嘎拉",
+    "MaxCP": 0,
+    "Type I": "Ground",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice"
+    ],
+    "Fast Attack(s)": [
+      "Mud Slap",
+      "Rock Smash"
+    ],
+    "Special Attack(s)": [
+      "Bone Club",
+      "Dig",
+      "Earthquake"
+    ]
+  },
+  {
+    "Id": 106,
+    "Classification": "Kicking Pokemon",
+    "Name": "Hitmonlee",
+    "Cname": "沙瓦郎",
+    "MaxCP": 0,
+    "Type I": "Fighting",
+    "Weaknesses": [
+      "Flying",
+      "Psychic",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Low Kick",
+      "Rock Smash"
+    ],
+    "Special Attack(s)": [
+      "Brick Break",
+      "Low Sweep",
+      "Stomp",
+      "Stone Edge"
+    ]
+  },
+  {
+    "Id": 107,
+    "Classification": "Punching Pokemon",
+    "Name": "Hitmonchan",
+    "Cname": "艾比郎",
+    "MaxCP": 0,
+    "Type I": "Fighting",
+    "Weaknesses": [
+      "Flying",
+      "Psychic",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Bullet Punch",
+      "Rock Smash"
+    ],
+    "Special Attack(s)": [
+      "Brick Break",
+      "Fire Punch",
+      "Ice Punch",
+      "Thunder Punch"
+    ]
+  },
+  {
+    "Id": 108,
+    "Classification": "Licking Pokemon",
+    "Name": "Lickitung",
+    "Cname": "大舌頭",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Lick",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Hyper Beam",
+      "Power Whip",
+      "Stomp"
+    ]
+  },
+  {
+    "Id": 109,
+    "Classification": "Poison Gas Pokemon",
+    "Name": "Koffing",
+    "Cname": "瓦斯彈",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Dark Pulse",
+      "Sludge",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 110,
+    "Classification": "Poison Gas Pokemon",
+    "Name": "Weezing",
+    "Cname": "雙彈瓦斯",
+    "MaxCP": 0,
+    "Type I": "Poison",
+    "Weaknesses": [
+      "Ground",
+      "Psychic"
+    ],
+    "Fast Attack(s)": [
+      "Acid",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Dark Pulse",
+      "Shadow Ball",
+      "Sludge Bomb"
+    ]
+  },
+  {
+    "Id": 111,
+    "Classification": "Spikes Pokemon",
+    "Name": "Rhyhorn",
+    "Cname": "鐵甲犀牛",
+    "MaxCP": 0,
+    "Type I": "Ground",
+    "Type II": "Rock",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice",
+      "Fighting",
+      "Ground",
+      "Steel"
+    ],
+    "Fast Attack(s)": [
+      "Mud Slap",
+      "Rock Smash"
+    ],
+    "Special Attack(s)": [
+      "Bulldoze",
+      "Horn Attack",
+      "Stomp"
+    ]
+  },
+  {
+    "Id": 112,
+    "Classification": "Drill Pokemon",
+    "Name": "Rhydon",
+    "Cname": "鐵甲暴龍",
+    "MaxCP": 0,
+    "Type I": "Ground",
+    "Type II": "Rock",
+    "Weaknesses": [
+      "Water",
+      "Grass",
+      "Ice",
+      "Fighting",
+      "Ground",
+      "Steel"
+    ],
+    "Fast Attack(s)": [
+      "Mud Slap",
+      "Rock Smash"
+    ],
+    "Special Attack(s)": [
+      "Earthquake",
+      "Megahorn",
+      "Stone Edge"
+    ]
+  },
+  {
+    "Id": 113,
+    "Classification": "Egg Pokemon",
+    "Name": "Chansey",
+    "Cname": "吉利蛋",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Pound",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Dazzling Gleam",
+      "Hyper Beam",
+      "Psybeam",
+      "Psychic"
+    ]
+  },
+  {
+    "Id": 114,
+    "Classification": "Vine Pokemon",
+    "Name": "Tangela",
+    "Cname": "蔓藤怪",
+    "MaxCP": 0,
+    "Type I": "Grass",
+    "Weaknesses": [
+      "Fire",
+      "Ice",
+      "Poison",
+      "Flying",
+      "Bug"
+    ],
+    "Fast Attack(s)": [
+      "Vine Whip"
+    ],
+    "Special Attack(s)": [
+      "Power Whip",
+      "Sludge Bomb",
+      "Solar Beam"
+    ]
+  },
+  {
+    "Id": 115,
+    "Classification": "Parent Pokemon",
+    "Name": "Kangaskhan",
+    "Cname": "袋龍",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Low Kick",
+      "Mud Slap"
+    ],
+    "Special Attack(s)": [
+      "Brick Break",
+      "Earthquake",
+      "Stomp"
+    ]
+  },
+  {
+    "Id": 116,
+    "Classification": "Dragon Pokemon",
+    "Name": "Horsea",
+    "Cname": "墨海馬",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Bubble",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Bubble Beam",
+      "Dragon Pulse",
+      "Flash Cannon"
+    ]
+  },
+  {
+    "Id": 117,
+    "Classification": "Dragon Pokemon",
+    "Name": "Seadra",
+    "Cname": "海刺龍",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Dragon Breath",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Blizzard",
+      "Dragon Pulse",
+      "Hydro Pump"
+    ]
+  },
+  {
+    "Id": 118,
+    "Classification": "Goldfish Pokemon",
+    "Name": "Goldeen",
+    "Cname": "角金魚",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Mud Shot",
+      "Peck"
+    ],
+    "Special Attack(s)": [
+      "Aqua Tail",
+      "Horn Attack",
+      "Water Pulse"
+    ]
+  },
+  {
+    "Id": 119,
+    "Classification": "Goldfish Pokemon",
+    "Name": "Seaking",
+    "Cname": "金魚王",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Peck",
+      "Poison Jab"
+    ],
+    "Special Attack(s)": [
+      "Drill Run",
+      "Icy Wind",
+      "Megahorn"
+    ]
+  },
+  {
+    "Id": 120,
+    "Classification": "Starshape Pokemon",
+    "Name": "Staryu",
+    "Cname": "海星星",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Quick Attack",
+      "Tackle",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Bubble Beam",
+      "Power Gem",
+      "Swift"
+    ]
+  },
+  {
+    "Id": 121,
+    "Classification": "Mysterious Pokemon",
+    "Name": "Starmie",
+    "Cname": "寶石海星",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Psychic",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Quick Attack",
+      "Tackle",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Hydro Pump",
+      "Power Gem",
+      "Psybeam",
+      "Psychic"
+    ]
+  },
+  {
+    "Id": 122,
+    "Classification": "Barrier Pokemon",
+    "Name": "Mr. Mime",
+    "Cname": "吸盤魔偶",
+    "MaxCP": 0,
+    "Type I": "Psychic",
+    "Type II": "Fairy",
+    "Weaknesses": [
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Psybeam",
+      "Psychic",
+      "Shadow Ball"
+    ]
+  },
+  {
+    "Id": 123,
+    "Classification": "Mantis Pokemon",
+    "Name": "Scyther",
+    "Cname": "飛天螳螂",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Fire",
+      "Electric",
+      "Ice",
+      "Flying",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Fury Cutter",
+      "Steel Wing"
+    ],
+    "Special Attack(s)": [
+      "Bug Buzz",
+      "Night Slash",
+      "X Scissor"
+    ]
+  },
+  {
+    "Id": 124,
+    "Classification": "Humanshape Pokemon",
+    "Name": "Jynx",
+    "Cname": "迷唇姐",
+    "MaxCP": 0,
+    "Type I": "Ice",
+    "Type II": "Psychic",
+    "Weaknesses": [
+      "Fire",
+      "Bug",
+      "Rock",
+      "Ghost",
+      "Dark",
+      "Steel"
+    ],
+    "Fast Attack(s)": [
+      "Frost Breath",
+      "Pound"
+    ],
+    "Special Attack(s)": [
+      "Draining Kiss",
+      "Ice Punch",
+      "Psyshock"
+    ]
+  },
+  {
+    "Id": 125,
+    "Classification": "Electric Pokemon",
+    "Name": "Electabuzz",
+    "Cname": "電擊獸",
+    "MaxCP": 0,
+    "Type I": "Electric",
+    "Weaknesses": [
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Low Kick",
+      "Thunder Shock"
+    ],
+    "Special Attack(s)": [
+      "Thunder",
+      "Thunder Punch",
+      "Thunderbolt"
+    ]
+  },
+  {
+    "Id": 126,
+    "Classification": "Spitfire Pokemon",
+    "Name": "Magmar",
+    "Cname": "鴨嘴火龍",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember",
+      "Karate Chop"
+    ],
+    "Special Attack(s)": [
+      "Fire Blast",
+      "Fire Punch",
+      "Flamethrower"
+    ]
+  },
+  {
+    "Id": 127,
+    "Classification": "Stagbeetle Pokemon",
+    "Name": "Pinsir",
+    "Cname": "大甲",
+    "MaxCP": 0,
+    "Type I": "Bug",
+    "Weaknesses": [
+      "Fire",
+      "Flying",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Fury Cutter",
+      "Rock Smash"
+    ],
+    "Special Attack(s)": [
+      "Submission",
+      "Vice Grip",
+      "X Scissor"
+    ]
+  },
+  {
+    "Id": 128,
+    "Classification": "Wild Bull Pokemon",
+    "Name": "Tauros",
+    "Cname": "肯泰羅",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Tackle",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Earthquake",
+      "Horn Attack",
+      "Iron Head"
+    ]
+  },
+  {
+    "Id": 129,
+    "Classification": "Fish Pokemon",
+    "Name": "Magikarp",
+    "Cname": "鯉魚王",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Splash"
+    ],
+    "Special Attack(s)": [
+      "Struggle"
+    ]
+  },
+  {
+    "Id": 130,
+    "Classification": "Atrocious Pokemon",
+    "Name": "Gyarados",
+    "Cname": "暴鯉龍",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Dragon Breath"
+    ],
+    "Special Attack(s)": [
+      "Dragon Pulse",
+      "Hydro Pump",
+      "Twister"
+    ]
+  },
+  {
+    "Id": 131,
+    "Classification": "Transport Pokemon",
+    "Name": "Lapras",
+    "Cname": "乘龍",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Type II": "Ice",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Fighting",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Frost Breath",
+      "Ice Shard"
+    ],
+    "Special Attack(s)": [
+      "Blizzard",
+      "Dragon Pulse",
+      "Ice Beam"
+    ]
+  },
+  {
+    "Id": 132,
+    "Classification": "Transform Pokemon",
+    "Name": "Ditto",
+    "Cname": "百變怪",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Pound"
+    ],
+    "Special Attack(s)": [
+      "Struggle"
+    ]
+  },
+  {
+    "Id": 133,
+    "Classification": "Evolution Pokemon",
+    "Name": "Eevee",
+    "Cname": "伊布",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Quick Attack",
+      "Tackle"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Dig",
+      "Swift"
+    ]
+  },
+  {
+    "Id": 134,
+    "Classification": "Bubble Jet Pokemon",
+    "Name": "Vaporeon",
+    "Cname": "水精靈",
+    "MaxCP": 0,
+    "Type I": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass"
+    ],
+    "Fast Attack(s)": [
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Aqua Tail",
+      "Hydro Pump",
+      "Water Pulse"
+    ]
+  },
+  {
+    "Id": 135,
+    "Classification": "Lightning Pokemon",
+    "Name": "Jolteon",
+    "Cname": "雷精靈",
+    "MaxCP": 0,
+    "Type I": "Electric",
+    "Weaknesses": [
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Thunder Shock"
+    ],
+    "Special Attack(s)": [
+      "Discharge",
+      "Thunder",
+      "Thunderbolt"
+    ]
+  },
+  {
+    "Id": 136,
+    "Classification": "Flame Pokemon",
+    "Name": "Flareon",
+    "Cname": "火精靈",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Weaknesses": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember"
+    ],
+    "Special Attack(s)": [
+      "Fire Blast",
+      "Flamethrower",
+      "Heat Wave"
+    ]
+  },
+  {
+    "Id": 137,
+    "Classification": "Virtual Pokemon",
+    "Name": "Porygon",
+    "Cname": "３Ｄ龍",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Quick Attack",
+      "Tackle",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Discharge",
+      "Psybeam",
+      "Signal Beam"
+    ]
+  },
+  {
+    "Id": 138,
+    "Classification": "Spiral Pokemon",
+    "Name": "Omanyte",
+    "Cname": "菊石獸",
+    "MaxCP": 0,
+    "Type I": "Rock",
+    "Type II": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Fighting",
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Mud Shot",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Ancient Power",
+      "Brine",
+      "Rock Tomb"
+    ]
+  },
+  {
+    "Id": 139,
+    "Classification": "Spiral Pokemon",
+    "Name": "Omastar",
+    "Cname": "多刺菊石獸",
+    "MaxCP": 0,
+    "Type I": "Rock",
+    "Type II": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Fighting",
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Mud Shot",
+      "Rock Throw",
+      "Water Gun"
+    ],
+    "Special Attack(s)": [
+      "Ancient Power",
+      "Hydro Pump",
+      "Rock Slide"
+    ]
+  },
+  {
+    "Id": 140,
+    "Classification": "Shellfish Pokemon",
+    "Name": "Kabuto",
+    "Cname": "化石盔",
+    "MaxCP": 0,
+    "Type I": "Rock",
+    "Type II": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Fighting",
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Mud Shot",
+      "Scratch"
+    ],
+    "Special Attack(s)": [
+      "Ancient Power",
+      "Aqua Jet",
+      "Rock Tomb"
+    ]
+  },
+  {
+    "Id": 141,
+    "Classification": "Shellfish Pokemon",
+    "Name": "Kabutops",
+    "Cname": "鐮刀盔",
+    "MaxCP": 0,
+    "Type I": "Rock",
+    "Type II": "Water",
+    "Weaknesses": [
+      "Electric",
+      "Grass",
+      "Fighting",
+      "Ground"
+    ],
+    "Fast Attack(s)": [
+      "Fury Cutter",
+      "Mud Shot"
+    ],
+    "Special Attack(s)": [
+      "Ancient Power",
+      "Stone Edge",
+      "Water Pulse"
+    ]
+  },
+  {
+    "Id": 142,
+    "Classification": "Fossil Pokemon",
+    "Name": "Aerodactyl",
+    "Cname": "化石翼龍",
+    "MaxCP": 0,
+    "Type I": "Rock",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Water",
+      "Electric",
+      "Ice",
+      "Rock",
+      "Steel"
+    ],
+    "Fast Attack(s)": [
+      "Bite",
+      "Steel Wing"
+    ],
+    "Special Attack(s)": [
+      "Ancient Power",
+      "Hyper Beam",
+      "Iron Head"
+    ]
+  },
+  {
+    "Id": 143,
+    "Classification": "Sleeping Pokemon",
+    "Name": "Snorlax",
+    "Cname": "卡比獸",
+    "MaxCP": 0,
+    "Type I": "Normal",
+    "Weaknesses": [
+      "Fighting"
+    ],
+    "Fast Attack(s)": [
+      "Lick",
+      "Zen Headbutt"
+    ],
+    "Special Attack(s)": [
+      "Body Slam",
+      "Earthquake",
+      "Hyper Beam"
+    ]
+  },
+  {
+    "Id": 144,
+    "Classification": "Freeze Pokemon",
+    "Name": "Articuno",
+    "Cname": "急凍鳥",
+    "MaxCP": 0,
+    "Type I": "Ice",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Fire",
+      "Electric",
+      "Rock",
+      "Steel"
+    ],
+    "Fast Attack(s)": [
+      "Frost Breath"
+    ],
+    "Special Attack(s)": [
+      "Blizzard",
+      "Ice Beam",
+      "Icy Wind"
+    ]
+  },
+  {
+    "Id": 145,
+    "Classification": "Electric Pokemon",
+    "Name": "Zapdos",
+    "Cname": "閃電鳥",
+    "MaxCP": 0,
+    "Type I": "Electric",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Ice",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Thunder Shock"
+    ],
+    "Special Attack(s)": [
+      "Discharge",
+      "Thunder",
+      "Thunderbolt"
+    ]
+  },
+  {
+    "Id": 146,
+    "Classification": "Flame Pokemon",
+    "Name": "Moltres",
+    "Cname": "火焰鳥",
+    "MaxCP": 0,
+    "Type I": "Fire",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Water",
+      "Electric",
+      "Rock"
+    ],
+    "Fast Attack(s)": [
+      "Ember"
+    ],
+    "Special Attack(s)": [
+      "Fire Blast",
+      "Flamethrower",
+      "Heat Wave"
+    ]
+  },
+  {
+    "Id": 147,
+    "Classification": "Dragon Pokemon",
+    "Name": "Dratini",
+    "Cname": "迷你龍",
+    "MaxCP": 0,
+    "Type I": "Dragon",
+    "Weaknesses": [
+      "Ice",
+      "Dragon",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Dragon Breath"
+    ],
+    "Special Attack(s)": [
+      "Aqua Tail",
+      "Twister",
+      "Wrap"
+    ]
+  },
+  {
+    "Id": 148,
+    "Classification": "Dragon Pokemon",
+    "Name": "Dragonair",
+    "Cname": "哈克龍",
+    "MaxCP": 0,
+    "Type I": "Dragon",
+    "Weaknesses": [
+      "Ice",
+      "Dragon",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Dragon Breath"
+    ],
+    "Special Attack(s)": [
+      "Aqua Tail",
+      "Dragon Pulse",
+      "Wrap"
+    ]
+  },
+  {
+    "Id": 149,
+    "Classification": "Dragon Pokemon",
+    "Name": "Dragonite",
+    "Cname": "快龍",
+    "MaxCP": 0,
+    "Type I": "Dragon",
+    "Type II": "Flying",
+    "Weaknesses": [
+      "Ice",
+      "Rock",
+      "Dragon",
+      "Fairy"
+    ],
+    "Fast Attack(s)": [
+      "Dragon Breath",
+      "Steel Wing"
+    ],
+    "Special Attack(s)": [
+      "Dragon Claw",
+      "Dragon Pulse",
+      "Hyper Beam"
+    ]
+  },
+  {
+    "Id": 150,
+    "Classification": "Genetic Pokemon",
+    "Name": "Mewtwo",
+    "Cname": "超夢",
+    "MaxCP": 0,
+    "Type I": "Psychic",
+    "Weaknesses": [
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Confusion",
+      "Psycho Cut"
+    ],
+    "Special Attack(s)": [
+      "Hyper Beam",
+      "Psychic",
+      "Shadow Ball"
+    ]
+  },
+  {
+    "Id": 151,
+    "Classification": "New Species Pokemon",
+    "Name": "Mew",
+    "Cname": "夢幻",
+    "MaxCP": 0,
+    "Type I": "Psychic",
+    "Weaknesses": [
+      "Bug",
+      "Ghost",
+      "Dark"
+    ],
+    "Fast Attack(s)": [
+      "Pound"
+    ],
+    "Special Attack(s)": [
+      "Blizzard",
+      "Dragon Pulse",
+      "Earthquake",
+      "Fire Blast",
+      "Hurricane",
+      "Hyper Beam",
+      "Moonblast",
+      "Psychic",
+      "Solar Beam",
+      "Thunder"
+    ]
+  }
+]
