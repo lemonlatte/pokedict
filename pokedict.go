@@ -407,8 +407,8 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 			default:
 				switch user.TodoAction {
 				case "QUERY_MONSTER":
-					skills := queryMonster(text)
-					returnText = formatMonsters(skills)
+					monsters := queryMonster(text)
+					returnText = formatMonsters(monsters)
 				case "QUERY_SKILL":
 					skills := querySkill(text)
 					returnText = formatSkills(skills)
