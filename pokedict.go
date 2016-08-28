@@ -25,6 +25,8 @@ const (
 	TG_TOKEN      = ""
 	TG_APIROOT    = "https://api.telegram.org/bot" + TG_TOKEN
 	TG_MessageURI = TG_APIROOT + "/sendMessage"
+
+	WELCOME_TEXT = `你好，歡迎使用 PokéDict。請輸入任何遊戲內容，機器人會為您搜尋適當的神奇寶貝資訊。`
 )
 
 type FBObject struct {
@@ -47,15 +49,34 @@ type FBRecipient struct {
 }
 
 type FBMessage struct {
-	Sender    FBSender         `json:"sender,omitempty"`
-	Recipient FBRecipient      `json:"recipient,omitempty"`
-	Timestamp int64            `json:"timestamp,omitempty"`
-	Content   FBMessageContent `json:"message"`
+	Sender    FBSender           `json:"sender,omitempty"`
+	Recipient FBRecipient        `json:"recipient,omitempty"`
+	Timestamp int64              `json:"timestamp,omitempty"`
+	Content   *FBMessageContent  `json:"message,omitempty"`
+	Delivery  *FBMessageDelivery `json:"delivery,omitempty"`
+	Postback  *FBMessagePostback `json:"postback,omitempty"`
 }
 
 type FBMessageContent struct {
-	Text string `json:"text"`
-	Seq  int64  `json:"seq,omitempty"`
+	Text        string                `json:"text"`
+	Seq         int64                 `json:"seq,omitempty"`
+	Attachments []FBMessageAttachment `json:"attachments,omitempty"`
+}
+
+type FBMessageAttachment struct {
+	Title   string
+	Url     string
+	Type    string
+	Payload json.RawMessage
+}
+
+type FBMessageDelivery struct {
+	Watermark int64 `json:"watermark"`
+	Seq       int64 `json:"seq"`
+}
+
+type FBMessagePostback struct {
+	Payload string `json:"payload"`
 }
 
 type TGEntry struct {
@@ -215,7 +236,7 @@ func tgCBHandler(w http.ResponseWriter, r *http.Request) {
 func fbSendTextMessage(ctx context.Context, senderId int64, text string) (err error) {
 	payload := FBMessage{
 		Recipient: FBRecipient{senderId},
-		Content: FBMessageContent{
+		Content: &FBMessageContent{
 			Text: text,
 		},
 	}
@@ -298,15 +319,19 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 			users[senderId] = user
 		}
 		log.Debugf(ctx, "%+v", fbMsg)
-		text := fbMsg.Content.Text
-		if text != "" {
-			var err error
 
-			switch strings.ToLower(text) {
+		if fbMsg.Content != nil {
+			var (
+				err        error
+				returnText string
+			)
+			text := fbMsg.Content.Text
+			q := strings.ToLower(text)
+			switch q {
 			case "get started":
 				fallthrough
 			case "hi", "hello", "你好", "您好":
-				returnText := `你好，歡迎使用 PokéDict。請輸入任何遊戲內容，機器人會為您搜尋適當的神奇寶貝資訊。`
+				returnText = WELCOME_TEXT
 				err = fbSendTextMessage(ctx, senderId, returnText)
 			default:
 				skills := querySkill(text)
@@ -318,12 +343,16 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 				http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
 			}
 			user.LastText = text
-		} else {
-			// err := fbSendTextMessage(ctx, sender, "你什麼也沒打")
-			// if err != nil {
-			// 	log.Errorf(ctx, "%s", err.Error())
-			// 	http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
-			// }
+		} else if fbMsg.Delivery != nil {
+		} else if fbMsg.Postback != nil {
+			var returnText string
+			switch fbMsg.Postback.Payload {
+			case "QUERY_MONSTER":
+			case "QUERY_SKILL":
+			case "GET_STARTED":
+				err = fbSendTextMessage(ctx, senderId, WELCOME_TEXT)
+			default:
+			}
 		}
 	}
 	fmt.Fprint(w, "")
