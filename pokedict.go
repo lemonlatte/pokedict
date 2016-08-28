@@ -397,12 +397,13 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 			case "get started":
 				fallthrough
 			case "hi", "hello", "你好", "您好":
+				user.TodoAction = ""
 				returnText = WELCOME_TEXT
 			case "找技能", "技能", "skill":
-				user.TodoAction = "QUERY_MONSTER"
+				user.TodoAction = "QUERY_SKILL"
 				returnText = "找什麼技能？"
 			case "找寵物", "寵物", "pokemon", "mon":
-				user.TodoAction = "QUERY_SKILL"
+				user.TodoAction = "QUERY_MONSTER"
 				returnText = "找什麼寵物？"
 			default:
 				switch user.TodoAction {
