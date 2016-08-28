@@ -408,10 +408,18 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 				switch user.TodoAction {
 				case "QUERY_MONSTER":
 					monsters := queryMonster(text)
-					returnText = formatMonsters(monsters)
+					if len(monsters) > 3 {
+						returnText = "範圍太大，多打些字吧"
+					} else {
+						returnText = formatMonsters(monsters)
+					}
 				case "QUERY_SKILL":
 					skills := querySkill(text)
-					returnText = formatSkills(skills)
+					if len(skills) > 6 {
+						returnText = "範圍太大，多打些字吧"
+					} else {
+						returnText = formatSkills(skills)
+					}
 				default:
 					user.TodoAction = ""
 					returnText = "我不懂你的意思。"
