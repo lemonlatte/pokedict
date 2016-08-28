@@ -109,11 +109,13 @@ type TGMessage struct {
 
 type User struct {
 	Id                int64
+	TodoAction        string
 	LastText          string
 	FollowedPokemonId []int64
 }
 
 var users map[int64]*User = map[int64]*User{}
+var monsterList []Pokemon = []Pokemon{}
 var skillList []PokemonSkill = []PokemonSkill{}
 
 func init() {
@@ -173,10 +175,39 @@ func loadSkillData(ctx context.Context) {
 	}
 }
 
+func loadMonsterData(ctx context.Context) {
+	monsterKeys := []*datastore.Key{}
+	monsterList = []Pokemon{}
+	f, err := os.Open("data/pokemon.json")
+	if err != nil {
+		log.Errorf(ctx, err.Error())
+		return
+	}
+	defer f.Close()
+
+	d := json.NewDecoder(f)
+	err = d.Decode(&monsterList)
+	if err != nil {
+		log.Errorf(ctx, err.Error())
+		return
+	}
+
+	for _, p := range monsterList {
+		monsterKeys = append(monsterKeys, datastore.NewKey(ctx, "Pokemon", p.Name, 0, nil))
+	}
+	log.Debugf(ctx, "%+v", monsterList)
+	_, err = datastore.PutMulti(ctx, monsterKeys, monsterList)
+	if err != nil {
+		log.Errorf(ctx, err.Error())
+		return
+	}
+}
+
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Hi, this is an FB Bot for PokéDict.")
 	ctx := appengine.NewContext(r)
 	loadSkillData(ctx)
+	loadMonsterData(ctx)
 }
 
 func tgSendTextMessage(ctx context.Context, chatId int64, text string) (err error) {
@@ -278,6 +309,16 @@ func querySkill(skillName string) []PokemonSkill {
 	return foundSkills
 }
 
+func queryMonster(monsterName string) []Pokemon {
+	foundMonsters := make([]Pokemon, 0)
+	for _, m := range monsterList {
+		if strings.Contains(strings.ToLower(m.Name), strings.ToLower(monsterName)) {
+			foundMonsters = append(foundMonsters, m)
+		}
+	}
+	return foundMonsters
+}
+
 func formatSkills(skills []PokemonSkill) string {
 	if numSkill := len(skills); numSkill == 0 {
 		return "什麼也沒找到"
@@ -286,8 +327,33 @@ func formatSkills(skills []PokemonSkill) string {
 		return fmt.Sprintf("%s (%s)\nDPS: %.2f", s.Name, s.Cname, s.Dps)
 	} else {
 		buf := bytes.NewBuffer([]byte{})
-		for i, s := range skills {
-			fmt.Fprintf(buf, "%d) %s (%s)\n-> DPS: %.2f\n", i+1, s.Name, s.Cname, s.Dps)
+		buf.WriteString("找到的技能如下:\n")
+		for _, s := range skills {
+			fmt.Fprintf(buf, "*) %s (%s)\n-> DPS: %.2f\n", s.Name, s.Cname, s.Dps)
+		}
+		return buf.String()
+	}
+}
+
+func formatMonsters(monsters []Pokemon) string {
+	if numSkill := len(monsters); numSkill == 0 {
+		return "什麼也沒找到"
+	} else if numSkill == 1 {
+		s := monsters[0]
+		typeII := ""
+		if s.TypeII != "" {
+			typeII = fmt.Sprintf("/%s", s.TypeII)
+		}
+		return fmt.Sprintf("%s (%s)\nType: %s%s", s.Name, s.Cname, s.TypeI, typeII)
+	} else {
+		buf := bytes.NewBuffer([]byte{})
+		buf.WriteString("找到的寵物如下:\n")
+		for _, s := range monsters {
+			typeII := ""
+			if s.TypeII != "" {
+				typeII = fmt.Sprintf("/%s", s.TypeII)
+			}
+			fmt.Fprintf(buf, "*) %s (%s)\nType: %s%s\n", s.Name, s.Cname, s.TypeI, typeII)
 		}
 		return buf.String()
 	}
@@ -332,12 +398,27 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 				fallthrough
 			case "hi", "hello", "你好", "您好":
 				returnText = WELCOME_TEXT
-				err = fbSendTextMessage(ctx, senderId, returnText)
+			case "找技能", "技能", "skill":
+				user.TodoAction = "QUERY_MONSTER"
+				returnText = "找什麼技能？"
+			case "找寵物", "寵物", "pokemon", "mon":
+				user.TodoAction = "QUERY_SKILL"
+				returnText = "找什麼寵物？"
 			default:
-				skills := querySkill(text)
-				returnText := formatSkills(skills)
-				err = fbSendTextMessage(ctx, senderId, returnText)
+				switch user.TodoAction {
+				case "QUERY_MONSTER":
+					skills := queryMonster(text)
+					returnText = formatMonsters(skills)
+				case "QUERY_SKILL":
+					skills := querySkill(text)
+					returnText = formatSkills(skills)
+				default:
+					user.TodoAction = ""
+					returnText = "我不懂你的意思。"
+				}
 			}
+
+			err = fbSendTextMessage(ctx, senderId, returnText)
 			if err != nil {
 				log.Errorf(ctx, "%s", err.Error())
 				http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
