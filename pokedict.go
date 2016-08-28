@@ -429,10 +429,19 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 			var returnText string
 			switch fbMsg.Postback.Payload {
 			case "QUERY_MONSTER":
+				returnText = "找什麼寵物？"
+				user.TodoAction = fbMsg.Postback.Payload
 			case "QUERY_SKILL":
+				returnText = "找什麼技能？"
+				user.TodoAction = fbMsg.Postback.Payload
 			case "GET_STARTED":
 				err = fbSendTextMessage(ctx, senderId, WELCOME_TEXT)
+				fallthrough
 			default:
+				user.TodoAction = ""
+			}
+			if returnText != "" {
+				err = fbSendTextMessage(ctx, senderId, returnText)
 			}
 		}
 	}
