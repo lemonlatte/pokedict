@@ -1,5 +1,5 @@
 application: pokedict
-version: alpha-004
+version: alpha-005
 runtime: go
 api_version: go1
 
