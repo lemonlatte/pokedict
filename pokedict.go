@@ -9,6 +9,9 @@ import (
 	"net/url"
 	"os"
 	"strings"
+	"time"
+
+	goradar "github.com/lemonlatte/goradar-api/api"
 
 	"golang.org/x/net/context"
 	"google.golang.org/appengine"
@@ -64,10 +67,31 @@ type FBMessageContent struct {
 }
 
 type FBMessageAttachment struct {
-	Title   string
-	Url     string
-	Type    string
-	Payload json.RawMessage
+	Title   string          `json:",omitempty"`
+	Url     string          `json:",omitempty"`
+	Type    string          `json:"type"`
+	Payload json.RawMessage `json:"payload"`
+}
+
+type FBLocationAttachment struct {
+	Coordinates Location `json:"coordinates"`
+}
+
+type Location struct {
+	Latitude  float64 `json:"lat"`
+	Longitude float64 `json:"long"`
+}
+
+type FBMessageTemplate struct {
+	Type     string          `json:"template_type"`
+	Elements json.RawMessage `json:"elements"`
+}
+
+type FBButtonItem struct {
+	Type    string `json:"type"`
+	Title   string `json:"title"`
+	Url     string `json:"url,omitempty"`
+	Payload string `json:"payload,omitempty"`
 }
 
 type FBMessageDelivery struct {
@@ -265,10 +289,56 @@ func tgCBHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func fbSendTextMessage(ctx context.Context, senderId int64, text string) (err error) {
-	payload := FBMessage{
-		Recipient: FBRecipient{senderId},
-		Content: &FBMessageContent{
-			Text: text,
+	payload := map[string]interface{}{
+		"recipient": FBRecipient{senderId},
+		"message":   map[string]string{"text": text},
+	}
+
+	b, err := json.Marshal(payload)
+	if err != nil {
+		return
+	}
+
+	log.Debugf(ctx, "Payload %s", b)
+	req, err := http.NewRequest("POST", FBMessageURI, bytes.NewBuffer(b))
+	if err != nil {
+		return
+	}
+	req.Header.Add("Content-Type", "application/json")
+
+	tr := &urlfetch.Transport{Context: ctx}
+	resp, err := tr.RoundTrip(req)
+	if err != nil {
+		return
+	}
+
+	if resp.StatusCode != 200 {
+		log.Infof(ctx, "Deliver status: %s", resp.Status)
+		buffer := bytes.NewBuffer([]byte{})
+		_, err = io.Copy(buffer, resp.Body)
+		log.Infof(ctx, buffer.String())
+	}
+	return
+}
+
+func fbSendGeneralTemplate(ctx context.Context, senderId int64, elements json.RawMessage) (err error) {
+	msgPayload := FBMessageTemplate{
+		Type:     "generic",
+		Elements: elements,
+	}
+
+	msgBuf, err := json.Marshal(&msgPayload)
+	if err != nil {
+		return
+	}
+
+	payload := map[string]interface{}{
+		"recipient": FBRecipient{senderId},
+		"message": map[string]interface{}{
+			"attachment": &FBMessageAttachment{
+				Type:    "template",
+				Payload: json.RawMessage(msgBuf),
+			},
 		},
 	}
 
@@ -359,6 +429,30 @@ func formatMonsters(monsters []Pokemon) string {
 	}
 }
 
+func getPokemonNear(ctx context.Context, lat, long float64) (monsters []goradar.PokemonLocation, err error) {
+	swlat := lat - 0.025
+	swlong := long - 0.025
+	nelat := lat + 0.025
+	nelong := long + 0.025
+	tr := &urlfetch.Transport{Context: ctx}
+	data, err := goradar.GetPokemon(tr.RoundTrip, swlat, swlong, nelat, nelong)
+	if err != nil {
+		log.Errorf(ctx, "%+v", err)
+		return
+	}
+
+	monsters = []goradar.PokemonLocation{}
+	for _, pl := range data.Pokemons {
+		switch pl.PokemonId {
+		case 3, 6, 9, 26, 28, 31, 34, 38, 45, 51, 57, 58, 59, 62, 65, 68, 71, 76, 78, 82,
+			89, 94, 97, 103, 106, 107, 108, 113, 115, 122, 128, 130, 131, 132, 134, 135,
+			136, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151:
+			monsters = append(monsters, pl)
+		}
+	}
+	return
+}
+
 func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	ctx := appengine.NewContext(r)
@@ -405,6 +499,9 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 			case "找寵物", "寵物", "pokemon", "mon":
 				user.TodoAction = "QUERY_MONSTER"
 				returnText = "找什麼寵物？"
+			case "搜怪", "找怪", "找稀有怪":
+				user.TodoAction = "FIND_MONSTER"
+				returnText = "你在哪？？"
 			default:
 				switch user.TodoAction {
 				case "QUERY_MONSTER":
@@ -421,13 +518,78 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 					} else {
 						returnText = formatSkills(skills)
 					}
+				case "FIND_MONSTER":
+					log.Debugf(ctx, "%+v", fbMsg.Content)
+					returnText = fmt.Sprintf("位置資訊有誤")
+					attachments := fbMsg.Content.Attachments
+					log.Debugf(ctx, "%+v", attachments)
+
+					if len(attachments) != 0 && attachments[0].Type == "location" {
+						payload := FBLocationAttachment{}
+						err := json.Unmarshal(attachments[0].Payload, &payload)
+						if err == nil {
+							lat := payload.Coordinates.Latitude
+							long := payload.Coordinates.Longitude
+							monsters, err := getPokemonNear(ctx, lat, long)
+							if err != nil {
+								returnText = "查詢失敗"
+							} else {
+								if len(monsters) == 0 {
+									returnText = "沒有稀有怪"
+								} else {
+									returnText = ""
+									elements := []map[string]interface{}{}
+									log.Debugf(ctx, "%+v", monsters)
+									for _, m := range monsters {
+										disappearTime := time.Unix(m.DisappearTime/1000, 0).Sub(time.Now())
+										element := map[string]interface{}{
+											"title":     m.Name,
+											"image_url": fmt.Sprintf("http://pgwave.com/assets/images/pokemon/3d-h120/%d.png", m.PokemonId),
+											"item_url":  fmt.Sprintf("http://maps.apple.com/maps?q=%f,%f&z=16", m.Latitude, m.Longitude),
+											"subtitle":  disappearTime.String(),
+											"buttons": []FBButtonItem{
+												FBButtonItem{
+													Type:  "web_url",
+													Title: "Get location",
+													Url:   fmt.Sprintf("http://maps.apple.com/maps?q=%f,%f&z=16", m.Latitude, m.Longitude),
+												},
+											},
+										}
+										log.Debugf(ctx, "%+v", element)
+										elements = append(elements, element)
+									}
+									if len(elements) > 10 {
+										elements = elements[0:10]
+									}
+									b, err := json.Marshal(elements)
+									if err != nil {
+										returnText = "查詢失敗"
+									} else {
+										if err := fbSendGeneralTemplate(ctx, senderId, json.RawMessage(b)); err != nil {
+											returnText = "查詢失敗"
+										}
+									}
+								}
+							}
+
+							// if err != nil {
+							// 	returnText = "查詢失敗"
+							// } else {
+							// 	returnText = formatMonsterLocation(monsters)
+							// }
+							// returnText = fmt.Sprintf("你在 %f, %f ", lat, long)
+						} else {
+							log.Errorf(ctx, err.Error())
+						}
+					}
 				default:
 					user.TodoAction = ""
 					returnText = "我不懂你的意思。"
 				}
 			}
-
-			err = fbSendTextMessage(ctx, senderId, returnText)
+			if returnText != "" {
+				err = fbSendTextMessage(ctx, senderId, returnText)
+			}
 			if err != nil {
 				log.Errorf(ctx, "%s", err.Error())
 				http.Error(w, "fail to deliver a message to a client", http.StatusInternalServerError)
@@ -442,6 +604,9 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 				user.TodoAction = fbMsg.Postback.Payload
 			case "QUERY_SKILL":
 				returnText = "找什麼技能？"
+				user.TodoAction = fbMsg.Postback.Payload
+			case "FIND_MONSTER":
+				returnText = "你在哪？？"
 				user.TodoAction = fbMsg.Postback.Payload
 			case "GET_STARTED":
 				err = fbSendTextMessage(ctx, senderId, WELCOME_TEXT)
