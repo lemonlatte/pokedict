@@ -139,8 +139,8 @@ type User struct {
 }
 
 var users map[int64]*User = map[int64]*User{}
-var monsterList []Pokemon = []Pokemon{}
-var skillList []PokemonSkill = []PokemonSkill{}
+var monsterMap map[int64]Pokemon = map[int64]Pokemon{}
+var skillMap map[int64]PokemonSkill = map[int64]PokemonSkill{}
 
 func init() {
 	http.HandleFunc("/tgCallback", tgCBHandler)
@@ -150,7 +150,7 @@ func init() {
 
 func loadSkillData(ctx context.Context) {
 	skillKeys := []*datastore.Key{}
-	skillList = []PokemonSkill{}
+	skillList := []PokemonSkill{}
 
 	f, err := os.Open("data/fastSkill.json")
 	if err != nil {
@@ -170,6 +170,7 @@ func loadSkillData(ctx context.Context) {
 		skill.Kind = "fast"
 		skillKeys = append(skillKeys, datastore.NewKey(ctx, "PokemonSkill", skill.Name, 0, nil))
 		skillList = append(skillList, skill)
+		skillMap[skill.Id] = skill
 	}
 
 	f, err = os.Open("data/chargeSkill.json")
@@ -190,6 +191,7 @@ func loadSkillData(ctx context.Context) {
 		skill.Kind = "charged"
 		skillKeys = append(skillKeys, datastore.NewKey(ctx, "PokemonSkill", skill.Name, 0, nil))
 		skillList = append(skillList, skill)
+		skillMap[skill.Id] = skill
 	}
 
 	log.Debugf(ctx, "%+v", skillList)
@@ -201,7 +203,7 @@ func loadSkillData(ctx context.Context) {
 
 func loadMonsterData(ctx context.Context) {
 	monsterKeys := []*datastore.Key{}
-	monsterList = []Pokemon{}
+	monsterList := []Pokemon{}
 	f, err := os.Open("data/pokemon.json")
 	if err != nil {
 		log.Errorf(ctx, err.Error())
@@ -218,6 +220,7 @@ func loadMonsterData(ctx context.Context) {
 
 	for _, p := range monsterList {
 		monsterKeys = append(monsterKeys, datastore.NewKey(ctx, "Pokemon", p.Name, 0, nil))
+		monsterMap[p.Id] = p
 	}
 	log.Debugf(ctx, "%+v", monsterList)
 	_, err = datastore.PutMulti(ctx, monsterKeys, monsterList)
@@ -371,7 +374,7 @@ func fbSendGeneralTemplate(ctx context.Context, senderId int64, elements json.Ra
 
 func querySkill(skillName string) []PokemonSkill {
 	foundSkills := make([]PokemonSkill, 0)
-	for _, s := range skillList {
+	for _, s := range skillMap {
 		if strings.Contains(strings.ToLower(s.Name), strings.ToLower(skillName)) {
 			foundSkills = append(foundSkills, s)
 		}
@@ -381,7 +384,7 @@ func querySkill(skillName string) []PokemonSkill {
 
 func queryMonster(monsterName string) []Pokemon {
 	foundMonsters := make([]Pokemon, 0)
-	for _, m := range monsterList {
+	for _, m := range monsterMap {
 		if strings.Contains(strings.ToLower(m.Name), strings.ToLower(monsterName)) {
 			foundMonsters = append(foundMonsters, m)
 		}
