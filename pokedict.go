@@ -9,6 +9,7 @@ import (
 	"net/url"
 	"os"
 	"strings"
+	"sync"
 	"time"
 
 	goradar "github.com/lemonlatte/goradar-api/api"
@@ -32,6 +33,8 @@ const (
 
 	WELCOME_TEXT = `你好，歡迎使用 PokéDict。請輸入任何遊戲內容，機器人會為您搜尋適當的神奇寶貝資訊。`
 )
+
+var lock sync.Mutex = sync.Mutex{}
 
 type FBObject struct {
 	Object string
@@ -150,6 +153,13 @@ func init() {
 }
 
 func loadSkillData(ctx context.Context) {
+	lock.Lock()
+	defer lock.Unlock()
+
+	if len(skillMap) != 0 {
+		return
+	}
+
 	skillKeys := []*datastore.Key{}
 	skillList := []PokemonSkill{}
 
@@ -203,6 +213,13 @@ func loadSkillData(ctx context.Context) {
 }
 
 func loadMonsterData(ctx context.Context) {
+	lock.Lock()
+	defer lock.Unlock()
+
+	if len(monsterMap) != 0 {
+		return
+	}
+
 	monsterKeys := []*datastore.Key{}
 	monsterList := []Pokemon{}
 	f, err := os.Open("data/pokemon.json")
@@ -278,7 +295,7 @@ func tgCBHandler(w http.ResponseWriter, r *http.Request) {
 
 	text := tgEntry.Message.Text
 	if text != "" {
-		skills := querySkill(text)
+		skills := querySkill(ctx, text)
 		returnText := formatSkills(skills)
 
 		err := tgSendTextMessage(ctx, tgEntry.Message.Chat.Id, returnText)
@@ -373,7 +390,11 @@ func fbSendGeneralTemplate(ctx context.Context, senderId int64, elements json.Ra
 	return
 }
 
-func querySkill(skillName string) []PokemonSkill {
+func querySkill(ctx context.Context, skillName string) []PokemonSkill {
+	if len(skillMap) == 0 {
+		loadSkillData(ctx)
+	}
+
 	foundSkills := make([]PokemonSkill, 0)
 	for _, s := range skillMap {
 		if strings.Contains(strings.ToLower(s.Name), strings.ToLower(skillName)) {
@@ -383,7 +404,11 @@ func querySkill(skillName string) []PokemonSkill {
 	return foundSkills
 }
 
-func queryMonster(monsterName string) []Pokemon {
+func queryMonster(ctx context.Context, monsterName string) []Pokemon {
+	if len(monsterMap) == 0 {
+		loadMonsterData(ctx)
+	}
+
 	foundMonsters := make([]Pokemon, 0)
 	for _, m := range monsterMap {
 		if strings.Contains(strings.ToLower(m.Name), strings.ToLower(monsterName)) {
@@ -434,6 +459,10 @@ func formatMonsters(monsters []Pokemon) string {
 }
 
 func getPokemonNear(ctx context.Context, lat, long float64) (monsters []goradar.PokemonLocation, err error) {
+	if len(monsterMap) == 0 {
+		loadMonsterData(ctx)
+	}
+
 	swlat := lat - 0.025
 	swlong := long - 0.025
 	nelat := lat + 0.025
@@ -532,14 +561,14 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 			default:
 				switch user.TodoAction {
 				case "QUERY_MONSTER":
-					monsters := queryMonster(text)
+					monsters := queryMonster(ctx, text)
 					if len(monsters) > 3 {
 						returnText = "範圍太大，多打些字吧"
 					} else {
 						returnText = formatMonsters(monsters)
 					}
 				case "QUERY_SKILL":
-					skills := querySkill(text)
+					skills := querySkill(ctx, text)
 					if len(skills) > 6 {
 						returnText = "範圍太大，多打些字吧"
 					} else {
