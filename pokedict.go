@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"math"
 	"net/http"
 	"net/url"
 	"os"
@@ -12,6 +13,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/TomiHiltunen/geohash-golang"
 	goradar "github.com/lemonlatte/goradar-api/api"
 
 	"golang.org/x/net/context"
@@ -458,52 +460,71 @@ func formatMonsters(monsters []Pokemon) string {
 	}
 }
 
-func getPokemonNear(ctx context.Context, lat, long float64) (monsters []goradar.PokemonLocation, err error) {
+func getShortAddr(ctx context.Context, id string, latitude, longitude float64) (shortAddr string) {
+	tr := &urlfetch.Transport{Context: ctx}
+
+	if item, err := memcache.Get(ctx, id); err == memcache.ErrCacheMiss {
+		r, err := getAddress(tr.RoundTrip, latitude, longitude)
+		defer time.Sleep(500 * time.Millisecond)
+		if err != nil {
+			log.Errorf(ctx, err.Error())
+		}
+		log.Infof(ctx, "Address: %+v", r)
+		item := &memcache.Item{
+			Key:   id,
+			Value: []byte(fmt.Sprintf("%s%s,%s", r.Address.State, r.Address.Suburb, r.Address.Road)),
+		}
+		err = memcache.Add(ctx, item)
+		if err != nil {
+			log.Errorf(ctx, err.Error())
+		} else {
+			shortAddr = string(item.Value)
+		}
+	} else if err != nil {
+		log.Errorf(ctx, "error getting item: %v", err)
+	} else {
+		shortAddr = string(item.Value)
+	}
+	return
+}
+
+func getDistances(lat1, long1, lat2, long2 float64) float64 {
+	return math.Sqrt(math.Pow((lat2-lat1)*110, 2) + math.Pow((long2-long1)*110, 2))
+}
+
+func getPokemonNear(ctx context.Context, lat, long float64) (monsters []PokemonPin, err error) {
 	if len(monsterMap) == 0 {
 		loadMonsterData(ctx)
 	}
+
+	tr := &urlfetch.Transport{Context: ctx}
 
 	swlat := lat - 0.025
 	swlong := long - 0.025
 	nelat := lat + 0.025
 	nelong := long + 0.025
-	tr := &urlfetch.Transport{Context: ctx}
 	data, err := goradar.GetPokemon(tr.RoundTrip, swlat, swlong, nelat, nelong)
 	if err != nil {
 		log.Errorf(ctx, "%+v", err)
 		return
 	}
 
-	monsters = []goradar.PokemonLocation{}
+	monsters = []PokemonPin{}
 	for _, pl := range data.Pokemons {
 		switch pl.PokemonId {
 		case 3, 6, 9, 26, 28, 31, 34, 38, 45, 51, 57, 58, 59, 62, 65, 68, 71, 76, 78, 82,
 			89, 94, 97, 103, 106, 107, 108, 113, 115, 122, 128, 130, 131, 132, 134, 135,
 			136, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151:
-
-			if item, err := memcache.Get(ctx, pl.Id); err == memcache.ErrCacheMiss {
-				r, err := getAddress(tr.RoundTrip, pl.Latitude, pl.Longitude)
-				if err != nil {
-					log.Errorf(ctx, err.Error())
-				}
-				log.Infof(ctx, "Address: %+v", r)
-				item := &memcache.Item{
-					Key:   pl.Id,
-					Value: []byte(fmt.Sprintf("%s%s,%s", r.Address.State, r.Address.Suburb, r.Address.Road)),
-				}
-				err = memcache.Add(ctx, item)
-				if err != nil {
-					log.Errorf(ctx, err.Error())
-				} else {
-					pl.Address = string(item.Value)
-				}
-				time.Sleep(time.Second)
-			} else if err != nil {
-				log.Errorf(ctx, "error getting item: %v", err)
-			} else {
-				pl.Address = string(item.Value)
+			pp := PokemonPin{
+				Id:            pl.Id,
+				Pokemon:       monsterMap[pl.PokemonId],
+				Geohash:       geohash.EncodeWithPrecision(pl.Latitude, pl.Longitude, 6),
+				DisappearTime: pl.DisappearTime,
+				Distance:      getDistances(pl.Latitude, pl.Longitude, lat, long),
+				Latitude:      pl.Latitude,
+				Longitude:     pl.Longitude,
 			}
-			monsters = append(monsters, pl)
+			monsters = append(monsters, pp)
 		}
 	}
 	return
@@ -586,26 +607,28 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 						if err == nil {
 							lat := payload.Coordinates.Latitude
 							long := payload.Coordinates.Longitude
-							monsterLocations, err := getPokemonNear(ctx, lat, long)
+							monsterPins, err := getPokemonNear(ctx, lat, long)
 							if err != nil {
 								returnText = "查詢失敗"
 							} else {
-								if len(monsterLocations) == 0 {
+								if len(monsterPins) == 0 {
 									returnText = "附近沒有稀有怪"
 								} else {
 									returnText = ""
 									elements := []map[string]interface{}{}
-									log.Debugf(ctx, "%+v", monsterLocations)
-									for _, m := range monsterLocations {
-										monster := monsterMap[m.PokemonId]
+									log.Debugf(ctx, "%+v", monsterPins)
+									for _, m := range monsterPins {
+										monster := m.Pokemon
+										shortAddr := getShortAddr(ctx, m.Id, m.Latitude, m.Longitude)
+
 										disappearTime := time.Unix(m.DisappearTime/1000, 0).Round(time.Second)
 										loc, _ := time.LoadLocation("Asia/Taipei")
 										restTime := disappearTime.Sub(time.Now().Round(time.Second))
 										element := map[string]interface{}{
 											"title":     fmt.Sprintf("%s (%s)", monster.Cname, monster.Name),
-											"image_url": fmt.Sprintf("http://pgwave.com/assets/images/pokemon/3d-h120/%d.png", m.PokemonId),
+											"image_url": fmt.Sprintf("http://pgwave.com/assets/images/pokemon/3d-h120/%d.png", m.Pokemon.Id),
 											"item_url":  fmt.Sprintf("http://maps.apple.com/maps?q=%f,%f&z=16", m.Latitude, m.Longitude),
-											"subtitle":  fmt.Sprintf("位置: %s\n消失時間 %s (剩餘 %s)", m.Address, disappearTime.In(loc).Format("15:04:05"), restTime.String()),
+											"subtitle":  fmt.Sprintf("位置: %s\n直線距離 %0.2fkm\n消失時間 %s (剩餘 %s)", shortAddr, m.Distance, disappearTime.In(loc).Format("15:04:05"), restTime.String()),
 											"buttons": []FBButtonItem{
 												FBButtonItem{
 													Type:  "web_url",

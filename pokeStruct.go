@@ -24,3 +24,15 @@ type Pokemon struct {
 	FastMoves      []string `json:"Fast Attack(s)"`
 	ChargedMoves   []string `json:"Special Attack(s)"`
 }
+
+type PokemonPin struct {
+	Id            string
+	Pokemon       Pokemon
+	Longitude     float64
+	Latitude      float64
+	DisappearTime int64
+	Geohash       string
+	Distance      float64
+	Address       Address
+	ShortAddr     string
+}
