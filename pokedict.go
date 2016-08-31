@@ -687,13 +687,6 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 									}
 								}
 							}
-
-							// if err != nil {
-							// 	returnText = "查詢失敗"
-							// } else {
-							// 	returnText = formatMonsterLocation(monsters)
-							// }
-							// returnText = fmt.Sprintf("你在 %f, %f ", lat, long)
 						} else {
 							log.Errorf(ctx, err.Error())
 						}
