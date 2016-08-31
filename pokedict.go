@@ -17,6 +17,7 @@ import (
 	"google.golang.org/appengine"
 	"google.golang.org/appengine/datastore"
 	"google.golang.org/appengine/log"
+	"google.golang.org/appengine/memcache"
 	"google.golang.org/appengine/urlfetch"
 )
 
@@ -450,6 +451,29 @@ func getPokemonNear(ctx context.Context, lat, long float64) (monsters []goradar.
 		case 3, 6, 9, 26, 28, 31, 34, 38, 45, 51, 57, 58, 59, 62, 65, 68, 71, 76, 78, 82,
 			89, 94, 97, 103, 106, 107, 108, 113, 115, 122, 128, 130, 131, 132, 134, 135,
 			136, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151:
+
+			if item, err := memcache.Get(ctx, pl.Id); err == memcache.ErrCacheMiss {
+				r, err := getAddress(tr.RoundTrip, pl.Latitude, pl.Longitude)
+				if err != nil {
+					log.Errorf(ctx, err.Error())
+				}
+				log.Infof(ctx, "Address: %+v", r)
+				item := &memcache.Item{
+					Key:   pl.Id,
+					Value: []byte(fmt.Sprintf("%s%s,%s", r.Address.State, r.Address.Suburb, r.Address.Road)),
+				}
+				err = memcache.Add(ctx, item)
+				if err != nil {
+					log.Errorf(ctx, err.Error())
+				} else {
+					pl.Address = string(item.Value)
+				}
+				time.Sleep(time.Second)
+			} else if err != nil {
+				log.Errorf(ctx, "error getting item: %v", err)
+			} else {
+				pl.Address = string(item.Value)
+			}
 			monsters = append(monsters, pl)
 		}
 	}
@@ -533,28 +557,31 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 						if err == nil {
 							lat := payload.Coordinates.Latitude
 							long := payload.Coordinates.Longitude
-							monsters, err := getPokemonNear(ctx, lat, long)
+							monsterLocations, err := getPokemonNear(ctx, lat, long)
 							if err != nil {
 								returnText = "查詢失敗"
 							} else {
-								if len(monsters) == 0 {
-									returnText = "沒有稀有怪"
+								if len(monsterLocations) == 0 {
+									returnText = "附近沒有稀有怪"
 								} else {
 									returnText = ""
 									elements := []map[string]interface{}{}
-									log.Debugf(ctx, "%+v", monsters)
-									for _, m := range monsters {
-										disappearTime := time.Unix(m.DisappearTime/1000, 0).Sub(time.Now())
+									log.Debugf(ctx, "%+v", monsterLocations)
+									for _, m := range monsterLocations {
+										monster := monsterMap[m.PokemonId]
+										disappearTime := time.Unix(m.DisappearTime/1000, 0).Round(time.Second)
+										loc, _ := time.LoadLocation("Asia/Taipei")
+										restTime := disappearTime.Sub(time.Now().Round(time.Second))
 										element := map[string]interface{}{
-											"title":     m.Name,
+											"title":     fmt.Sprintf("%s (%s)", monster.Cname, monster.Name),
 											"image_url": fmt.Sprintf("http://pgwave.com/assets/images/pokemon/3d-h120/%d.png", m.PokemonId),
 											"item_url":  fmt.Sprintf("http://maps.apple.com/maps?q=%f,%f&z=16", m.Latitude, m.Longitude),
-											"subtitle":  disappearTime.String(),
+											"subtitle":  fmt.Sprintf("位置: %s\n消失時間 %s (剩餘 %s)", m.Address, disappearTime.In(loc).Format("15:04:05"), restTime.String()),
 											"buttons": []FBButtonItem{
 												FBButtonItem{
 													Type:  "web_url",
-													Title: "Get location",
-													Url:   fmt.Sprintf("http://maps.apple.com/maps?q=%f,%f&z=16", m.Latitude, m.Longitude),
+													Title: "Google Map",
+													Url:   fmt.Sprintf("https://maps.google.com.tw/?q=%f,%f", m.Latitude, m.Longitude),
 												},
 											},
 										}
