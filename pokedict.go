@@ -530,6 +530,22 @@ func getPokemonNear(ctx context.Context, lat, long float64) (monsters []PokemonP
 	return
 }
 
+func generateTemplateElements(ctx context.Context, items []map[string]string) (elements []map[string]interface{}) {
+	elements = []map[string]interface{}{}
+
+	for _, item := range items {
+		element := map[string]interface{}{
+			"title":     item["title"],
+			"image_url": item["image_url"],
+			"item_url":  item["item_url"],
+			"subtitle":  item["subtitle"],
+		}
+		log.Debugf(ctx, "%+v", element)
+		elements = append(elements, element)
+	}
+	return
+}
+
 func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	ctx := appengine.NewContext(r)
@@ -583,10 +599,28 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 				switch user.TodoAction {
 				case "QUERY_MONSTER":
 					monsters := queryMonster(ctx, text)
-					if len(monsters) > 3 {
+					if len(monsters) > 6 {
 						returnText = "範圍太大，多打些字吧"
 					} else {
-						returnText = formatMonsters(monsters)
+						monstersItems := []map[string]string{}
+						for _, m := range monsters {
+							monstersItems = append(monstersItems, map[string]string{
+								"title": fmt.Sprintf("%s (%s)", m.Cname, m.Name),
+								"subtitle": fmt.Sprintf("屬性: %s %s \n速技: %s\n充能技: %s", m.TypeI, m.TypeII,
+									strings.Join(m.FastMoves, ", "), strings.Join(m.ChargedMoves, ", ")),
+								"image_url": fmt.Sprintf("http://pgwave.com/assets/images/pokemon/3d-h120/%d.png", m.Id),
+								"item_url":  fmt.Sprintf("http://pgwave.com/zh-hant/pokemon/%s", m.Id),
+							})
+						}
+						elements := generateTemplateElements(ctx, monstersItems)
+						b, err := json.Marshal(elements)
+						if err != nil {
+							returnText = "查詢失敗"
+						} else {
+							if err := fbSendGeneralTemplate(ctx, senderId, json.RawMessage(b)); err != nil {
+								returnText = "查詢失敗"
+							}
+						}
 					}
 				case "QUERY_SKILL":
 					skills := querySkill(ctx, text)
