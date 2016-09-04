@@ -4,7 +4,7 @@
     "Classification": "Seed Pokemon",
     "Name": "Bulbasaur",
     "Cname": "妙蛙種子",
-    "MaxCP": 0,
+    "MaxCP": 1071,
     "Type I": "Grass",
     "Type II": "Poison",
     "Weaknesses": [
@@ -28,7 +28,7 @@
     "Classification": "Seed Pokemon",
     "Name": "Ivysaur",
     "Cname": "妙蛙草",
-    "MaxCP": 0,
+    "MaxCP": 1632,
     "Type I": "Grass",
     "Type II": "Poison",
     "Weaknesses": [
@@ -52,7 +52,7 @@
     "Classification": "Seed Pokemon",
     "Name": "Venusaur",
     "Cname": "妙蛙花",
-    "MaxCP": 0,
+    "MaxCP": 2580,
     "Type I": "Grass",
     "Type II": "Poison",
     "Weaknesses": [
@@ -76,7 +76,7 @@
     "Classification": "Lizard Pokemon",
     "Name": "Charmander",
     "Cname": "小火龍",
-    "MaxCP": 0,
+    "MaxCP": 955,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -98,7 +98,7 @@
     "Classification": "Flame Pokemon",
     "Name": "Charmeleon",
     "Cname": "火恐龍",
-    "MaxCP": 0,
+    "MaxCP": 1557,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -120,7 +120,7 @@
     "Classification": "Flame Pokemon",
     "Name": "Charizard",
     "Cname": "噴火龍",
-    "MaxCP": 0,
+    "MaxCP": 2602,
     "Type I": "Fire",
     "Type II": "Flying",
     "Weaknesses": [
@@ -143,7 +143,7 @@
     "Classification": "Tiny Turtle Pokemon",
     "Name": "Squirtle",
     "Cname": "傑尼龜",
-    "MaxCP": 0,
+    "MaxCP": 1008,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -164,7 +164,7 @@
     "Classification": "Turtle Pokemon",
     "Name": "Wartortle",
     "Cname": "卡咪龜",
-    "MaxCP": 0,
+    "MaxCP": 1582,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -185,7 +185,7 @@
     "Classification": "Shellfish Pokemon",
     "Name": "Blastoise",
     "Cname": "水箭龜",
-    "MaxCP": 0,
+    "MaxCP": 2542,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -206,7 +206,7 @@
     "Classification": "Worm Pokemon",
     "Name": "Caterpie",
     "Cname": "綠毛蟲",
-    "MaxCP": 0,
+    "MaxCP": 443,
     "Type I": "Bug",
     "Weaknesses": [
       "Fire",
@@ -226,7 +226,7 @@
     "Classification": "Cocoon Pokemon",
     "Name": "Metapod",
     "Cname": "鐵甲蛹",
-    "MaxCP": 0,
+    "MaxCP": 477,
     "Type I": "Bug",
     "Weaknesses": [
       "Fire",
@@ -246,7 +246,7 @@
     "Classification": "Butterfly Pokemon",
     "Name": "Butterfree",
     "Cname": "巴大蝴",
-    "MaxCP": 0,
+    "MaxCP": 1454,
     "Type I": "Bug",
     "Type II": "Flying",
     "Weaknesses": [
@@ -271,7 +271,7 @@
     "Classification": "Hairy Pokemon",
     "Name": "Weedle",
     "Cname": "獨角蟲",
-    "MaxCP": 0,
+    "MaxCP": 449,
     "Type I": "Bug",
     "Type II": "Poison",
     "Weaknesses": [
@@ -293,7 +293,7 @@
     "Classification": "Cocoon Pokemon",
     "Name": "Kakuna",
     "Cname": "鐵殼昆",
-    "MaxCP": 0,
+    "MaxCP": 485,
     "Type I": "Bug",
     "Type II": "Poison",
     "Weaknesses": [
@@ -315,7 +315,7 @@
     "Classification": "Poison Bee Pokemon",
     "Name": "Beedrill",
     "Cname": "大針蜂",
-    "MaxCP": 0,
+    "MaxCP": 1439,
     "Type I": "Bug",
     "Type II": "Poison",
     "Weaknesses": [
@@ -339,7 +339,7 @@
     "Classification": "Tiny Bird Pokemon",
     "Name": "Pidgey",
     "Cname": "波波",
-    "MaxCP": 0,
+    "MaxCP": 679,
     "Type I": "Normal",
     "Type II": "Flying",
     "Weaknesses": [
@@ -361,7 +361,7 @@
     "Classification": "Bird Pokemon",
     "Name": "Pidgeotto",
     "Cname": "比比鳥",
-    "MaxCP": 0,
+    "MaxCP": 1223,
     "Type I": "Normal",
     "Type II": "Flying",
     "Weaknesses": [
@@ -383,7 +383,7 @@
     "Classification": "Bird Pokemon",
     "Name": "Pidgeot",
     "Cname": "比鵰",
-    "MaxCP": 0,
+    "MaxCP": 2091,
     "Type I": "Normal",
     "Type II": "Flying",
     "Weaknesses": [
@@ -405,7 +405,7 @@
     "Classification": "Mouse Pokemon",
     "Name": "Rattata",
     "Cname": "小拉達",
-    "MaxCP": 0,
+    "MaxCP": 581,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -425,7 +425,7 @@
     "Classification": "Mouse Pokemon",
     "Name": "Raticate",
     "Cname": "拉達",
-    "MaxCP": 0,
+    "MaxCP": 1444,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -445,7 +445,7 @@
     "Classification": "Tiny Bird Pokemon",
     "Name": "Spearow",
     "Cname": "烈雀",
-    "MaxCP": 0,
+    "MaxCP": 686,
     "Type I": "Normal",
     "Type II": "Flying",
     "Weaknesses": [
@@ -467,7 +467,7 @@
     "Classification": "Beak Pokemon",
     "Name": "Fearow",
     "Cname": "大嘴雀",
-    "MaxCP": 0,
+    "MaxCP": 1746,
     "Type I": "Normal",
     "Type II": "Flying",
     "Weaknesses": [
@@ -489,7 +489,7 @@
     "Classification": "Snake Pokemon",
     "Name": "Ekans",
     "Cname": "阿柏蛇",
-    "MaxCP": 0,
+    "MaxCP": 824,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -510,7 +510,7 @@
     "Classification": "Cobra Pokemon",
     "Name": "Arbok",
     "Cname": "阿柏怪",
-    "MaxCP": 0,
+    "MaxCP": 1767,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -531,7 +531,7 @@
     "Classification": "Mouse Pokemon",
     "Name": "Pikachu",
     "Cname": "皮卡丘",
-    "MaxCP": 0,
+    "MaxCP": 887,
     "Type I": "Electric",
     "Weaknesses": [
       "Ground"
@@ -551,7 +551,7 @@
     "Classification": "Mouse Pokemon",
     "Name": "Raichu",
     "Cname": "雷丘",
-    "MaxCP": 0,
+    "MaxCP": 2028,
     "Type I": "Electric",
     "Weaknesses": [
       "Ground"
@@ -571,7 +571,7 @@
     "Classification": "Mouse Pokemon",
     "Name": "Sandshrew",
     "Cname": "穿山鼠",
-    "MaxCP": 0,
+    "MaxCP": 798,
     "Type I": "Ground",
     "Weaknesses": [
       "Water",
@@ -593,7 +593,7 @@
     "Classification": "Mouse Pokemon",
     "Name": "Sandslash",
     "Cname": "穿山王",
-    "MaxCP": 0,
+    "MaxCP": 1810,
     "Type I": "Ground",
     "Weaknesses": [
       "Water",
@@ -615,7 +615,7 @@
     "Classification": "Poison Pin Pokemon",
     "Name": "Nidoran F",
     "Cname": "尼多蘭",
-    "MaxCP": 0,
+    "MaxCP": 876,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -636,7 +636,7 @@
     "Classification": "Poison Pin Pokemon",
     "Name": "Nidorina",
     "Cname": "尼多娜",
-    "MaxCP": 0,
+    "MaxCP": 1404,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -657,7 +657,7 @@
     "Classification": "Drill Pokemon",
     "Name": "Nidoqueen",
     "Cname": "尼多后",
-    "MaxCP": 0,
+    "MaxCP": 2485,
     "Type I": "Poison",
     "Type II": "Ground",
     "Weaknesses": [
@@ -681,7 +681,7 @@
     "Classification": "Poison Pin Pokemon",
     "Name": "Nidoran M",
     "Cname": "尼多朗",
-    "MaxCP": 0,
+    "MaxCP": 843,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -702,7 +702,7 @@
     "Classification": "Poison Pin Pokemon",
     "Name": "Nidorino",
     "Cname": "尼多力諾",
-    "MaxCP": 0,
+    "MaxCP": 1372,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -723,7 +723,7 @@
     "Classification": "Drill Pokemon",
     "Name": "Nidoking",
     "Cname": "尼多王",
-    "MaxCP": 0,
+    "MaxCP": 2475,
     "Type I": "Poison",
     "Type II": "Ground",
     "Weaknesses": [
@@ -747,7 +747,7 @@
     "Classification": "Fairy Pokemon",
     "Name": "Clefairy",
     "Cname": "皮皮",
-    "MaxCP": 0,
+    "MaxCP": 1200,
     "Type I": "Fairy",
     "Weaknesses": [
       "Fighting"
@@ -767,7 +767,7 @@
     "Classification": "Fairy Pokemon",
     "Name": "Clefable",
     "Cname": "皮可西",
-    "MaxCP": 0,
+    "MaxCP": 2397,
     "Type I": "Fairy",
     "Weaknesses": [
       "Fighting"
@@ -787,7 +787,7 @@
     "Classification": "Fox Pokemon",
     "Name": "Vulpix",
     "Cname": "六尾",
-    "MaxCP": 0,
+    "MaxCP": 831,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -809,7 +809,7 @@
     "Classification": "Fox Pokemon",
     "Name": "Ninetales",
     "Cname": "九尾",
-    "MaxCP": 0,
+    "MaxCP": 2188,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -831,7 +831,7 @@
     "Classification": "Balloon Pokemon",
     "Name": "Jigglypuff",
     "Cname": "胖丁",
-    "MaxCP": 0,
+    "MaxCP": 917,
     "Type I": "Normal",
     "Type II": "Fairy",
     "Weaknesses": [
@@ -854,7 +854,7 @@
     "Classification": "Balloon Pokemon",
     "Name": "Wigglytuff",
     "Cname": "胖可丁",
-    "MaxCP": 0,
+    "MaxCP": 2177,
     "Type I": "Normal",
     "Type II": "Fairy",
     "Weaknesses": [
@@ -875,7 +875,7 @@
     "Classification": "Bat Pokemon",
     "Name": "Zubat",
     "Cname": "超音蝠",
-    "MaxCP": 0,
+    "MaxCP": 642,
     "Type I": "Poison",
     "Type II": "Flying",
     "Weaknesses": [
@@ -899,7 +899,7 @@
     "Classification": "Bat Pokemon",
     "Name": "Golbat",
     "Cname": "大嘴蝠",
-    "MaxCP": 0,
+    "MaxCP": 1921,
     "Type I": "Poison",
     "Type II": "Flying",
     "Weaknesses": [
@@ -923,7 +923,7 @@
     "Classification": "Weed Pokemon",
     "Name": "Oddish",
     "Cname": "走路草",
-    "MaxCP": 0,
+    "MaxCP": 1148,
     "Type I": "Grass",
     "Type II": "Poison",
     "Weaknesses": [
@@ -947,7 +947,7 @@
     "Classification": "Weed Pokemon",
     "Name": "Gloom",
     "Cname": "臭臭花",
-    "MaxCP": 0,
+    "MaxCP": 1689,
     "Type I": "Grass",
     "Type II": "Poison",
     "Weaknesses": [
@@ -971,7 +971,7 @@
     "Classification": "Flower Pokemon",
     "Name": "Vileplume",
     "Cname": "霸王花",
-    "MaxCP": 0,
+    "MaxCP": 2492,
     "Type I": "Grass",
     "Type II": "Poison",
     "Weaknesses": [
@@ -995,7 +995,7 @@
     "Classification": "Mushroom Pokemon",
     "Name": "Paras",
     "Cname": "派拉斯",
-    "MaxCP": 0,
+    "MaxCP": 916,
     "Type I": "Bug",
     "Type II": "Grass",
     "Weaknesses": [
@@ -1021,7 +1021,7 @@
     "Classification": "Mushroom Pokemon",
     "Name": "Parasect",
     "Cname": "派拉斯特",
-    "MaxCP": 0,
+    "MaxCP": 1747,
     "Type I": "Bug",
     "Type II": "Grass",
     "Weaknesses": [
@@ -1047,7 +1047,7 @@
     "Classification": "Insect Pokemon",
     "Name": "Venonat",
     "Cname": "毛球",
-    "MaxCP": 0,
+    "MaxCP": 1029,
     "Type I": "Bug",
     "Type II": "Poison",
     "Weaknesses": [
@@ -1071,7 +1071,7 @@
     "Classification": "Poison Moth Pokemon",
     "Name": "Venomoth",
     "Cname": "末入蛾",
-    "MaxCP": 0,
+    "MaxCP": 1890,
     "Type I": "Bug",
     "Type II": "Poison",
     "Weaknesses": [
@@ -1095,7 +1095,7 @@
     "Classification": "Mole Pokemon",
     "Name": "Diglett",
     "Cname": "地鼠",
-    "MaxCP": 0,
+    "MaxCP": 456,
     "Type I": "Ground",
     "Weaknesses": [
       "Water",
@@ -1118,7 +1118,7 @@
     "Classification": "Mole Pokemon",
     "Name": "Dugtrio",
     "Cname": "三地鼠",
-    "MaxCP": 0,
+    "MaxCP": 1168,
     "Type I": "Ground",
     "Weaknesses": [
       "Water",
@@ -1141,7 +1141,7 @@
     "Classification": "Scratch Cat Pokemon",
     "Name": "Meowth",
     "Cname": "喵喵",
-    "MaxCP": 0,
+    "MaxCP": 756,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -1161,7 +1161,7 @@
     "Classification": "Classy Cat Pokemon",
     "Name": "Persian",
     "Cname": "貓老大",
-    "MaxCP": 0,
+    "MaxCP": 1631,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -1181,7 +1181,7 @@
     "Classification": "Duck Pokemon",
     "Name": "Psyduck",
     "Cname": "可達鴨",
-    "MaxCP": 0,
+    "MaxCP": 1109,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -1202,7 +1202,7 @@
     "Classification": "Duck Pokemon",
     "Name": "Golduck",
     "Cname": "哥達鴨",
-    "MaxCP": 0,
+    "MaxCP": 2386,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -1223,7 +1223,7 @@
     "Classification": "Pig Monkey Pokemon",
     "Name": "Mankey",
     "Cname": "猴怪",
-    "MaxCP": 0,
+    "MaxCP": 878,
     "Type I": "Fighting",
     "Weaknesses": [
       "Flying",
@@ -1245,7 +1245,7 @@
     "Classification": "Pig Monkey Pokemon",
     "Name": "Primeape",
     "Cname": "火爆猴",
-    "MaxCP": 0,
+    "MaxCP": 1864,
     "Type I": "Fighting",
     "Weaknesses": [
       "Flying",
@@ -1267,7 +1267,7 @@
     "Classification": "Puppy Pokemon",
     "Name": "Growlithe",
     "Cname": "卡蒂狗",
-    "MaxCP": 0,
+    "MaxCP": 1335,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -1289,7 +1289,7 @@
     "Classification": "Legendary Pokemon",
     "Name": "Arcanine",
     "Cname": "風速狗",
-    "MaxCP": 0,
+    "MaxCP": 2983,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -1311,7 +1311,7 @@
     "Classification": "Tadpole Pokemon",
     "Name": "Poliwag",
     "Cname": "蚊香蝌蚪",
-    "MaxCP": 0,
+    "MaxCP": 795,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -1332,7 +1332,7 @@
     "Classification": "Tadpole Pokemon",
     "Name": "Poliwhirl",
     "Cname": "蚊香蛙",
-    "MaxCP": 0,
+    "MaxCP": 1340,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -1353,7 +1353,7 @@
     "Classification": "Tadpole Pokemon",
     "Name": "Poliwrath",
     "Cname": "快泳蛙",
-    "MaxCP": 0,
+    "MaxCP": 2505,
     "Type I": "Water",
     "Type II": "Fighting",
     "Weaknesses": [
@@ -1378,7 +1378,7 @@
     "Classification": "Psi Pokemon",
     "Name": "Abra",
     "Cname": "凱西",
-    "MaxCP": 0,
+    "MaxCP": 600,
     "Type I": "Psychic",
     "Weaknesses": [
       "Bug",
@@ -1399,7 +1399,7 @@
     "Classification": "Psi Pokemon",
     "Name": "Kadabra",
     "Cname": "勇吉拉",
-    "MaxCP": 0,
+    "MaxCP": 1131,
     "Type I": "Psychic",
     "Weaknesses": [
       "Bug",
@@ -1421,7 +1421,7 @@
     "Classification": "Psi Pokemon",
     "Name": "Alakazam",
     "Cname": "胡地",
-    "MaxCP": 0,
+    "MaxCP": 1813,
     "Type I": "Psychic",
     "Weaknesses": [
       "Bug",
@@ -1443,7 +1443,7 @@
     "Classification": "Superpower Pokemon",
     "Name": "Machop",
     "Cname": "腕力",
-    "MaxCP": 0,
+    "MaxCP": 1089,
     "Type I": "Fighting",
     "Weaknesses": [
       "Flying",
@@ -1465,7 +1465,7 @@
     "Classification": "Superpower Pokemon",
     "Name": "Machoke",
     "Cname": "豪力",
-    "MaxCP": 0,
+    "MaxCP": 1760,
     "Type I": "Fighting",
     "Weaknesses": [
       "Flying",
@@ -1487,7 +1487,7 @@
     "Classification": "Superpower Pokemon",
     "Name": "Machamp",
     "Cname": "怪力",
-    "MaxCP": 0,
+    "MaxCP": 2594,
     "Type I": "Fighting",
     "Weaknesses": [
       "Flying",
@@ -1509,7 +1509,7 @@
     "Classification": "Flower Pokemon",
     "Name": "Bellsprout",
     "Cname": "喇叭芽",
-    "MaxCP": 0,
+    "MaxCP": 1117,
     "Type I": "Grass",
     "Type II": "Poison",
     "Weaknesses": [
@@ -1533,7 +1533,7 @@
     "Classification": "Flycatcher Pokemon",
     "Name": "Weepinbell",
     "Cname": "口呆花",
-    "MaxCP": 0,
+    "MaxCP": 1723,
     "Type I": "Grass",
     "Type II": "Poison",
     "Weaknesses": [
@@ -1557,7 +1557,7 @@
     "Classification": "Flycatcher Pokemon",
     "Name": "Victreebel",
     "Cname": "大食花",
-    "MaxCP": 0,
+    "MaxCP": 2530,
     "Type I": "Grass",
     "Type II": "Poison",
     "Weaknesses": [
@@ -1581,7 +1581,7 @@
     "Classification": "Jellyfish Pokemon",
     "Name": "Tentacool",
     "Cname": "瑪瑙水母",
-    "MaxCP": 0,
+    "MaxCP": 905,
     "Type I": "Water",
     "Type II": "Poison",
     "Weaknesses": [
@@ -1604,7 +1604,7 @@
     "Classification": "Jellyfish Pokemon",
     "Name": "Tentacruel",
     "Cname": "毒刺水母",
-    "MaxCP": 0,
+    "MaxCP": 2220,
     "Type I": "Water",
     "Type II": "Poison",
     "Weaknesses": [
@@ -1627,7 +1627,7 @@
     "Classification": "Rock Pokemon",
     "Name": "Geodude",
     "Cname": "小拳石",
-    "MaxCP": 0,
+    "MaxCP": 849,
     "Type I": "Rock",
     "Type II": "Ground",
     "Weaknesses": [
@@ -1653,7 +1653,7 @@
     "Classification": "Rock Pokemon",
     "Name": "Graveler",
     "Cname": "隆隆石",
-    "MaxCP": 0,
+    "MaxCP": 1433,
     "Type I": "Rock",
     "Type II": "Ground",
     "Weaknesses": [
@@ -1680,7 +1680,7 @@
     "Classification": "Megaton Pokemon",
     "Name": "Golem",
     "Cname": "隆隆岩",
-    "MaxCP": 0,
+    "MaxCP": 2303,
     "Type I": "Rock",
     "Type II": "Ground",
     "Weaknesses": [
@@ -1707,7 +1707,7 @@
     "Classification": "Fire Horse Pokemon",
     "Name": "Ponyta",
     "Cname": "小火馬",
-    "MaxCP": 0,
+    "MaxCP": 1516,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -1729,7 +1729,7 @@
     "Classification": "Fire Horse Pokemon",
     "Name": "Rapidash",
     "Cname": "烈焰馬",
-    "MaxCP": 0,
+    "MaxCP": 2199,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -1751,7 +1751,7 @@
     "Classification": "Dopey Pokemon",
     "Name": "Slowpoke",
     "Cname": "呆呆獸",
-    "MaxCP": 0,
+    "MaxCP": 1218,
     "Type I": "Water",
     "Type II": "Psychic",
     "Weaknesses": [
@@ -1776,7 +1776,7 @@
     "Classification": "Hermit Crab Pokemon",
     "Name": "Slowbro",
     "Cname": "呆河馬",
-    "MaxCP": 0,
+    "MaxCP": 2597,
     "Type I": "Water",
     "Type II": "Psychic",
     "Weaknesses": [
@@ -1801,7 +1801,7 @@
     "Classification": "Magnet Pokemon",
     "Name": "Magnemite",
     "Cname": "小磁怪",
-    "MaxCP": 0,
+    "MaxCP": 890,
     "Type I": "Electric",
     "Type II": "Steel",
     "Weaknesses": [
@@ -1824,7 +1824,7 @@
     "Classification": "Magnet Pokemon",
     "Name": "Magneton",
     "Cname": "三合一磁怪",
-    "MaxCP": 0,
+    "MaxCP": 1879,
     "Type I": "Electric",
     "Type II": "Steel",
     "Weaknesses": [
@@ -1847,7 +1847,7 @@
     "Classification": "Wild Duck Pokemon",
     "Name": "Farfetch'd",
     "Cname": "大蔥鴨",
-    "MaxCP": 0,
+    "MaxCP": 1263,
     "Type I": "Normal",
     "Type II": "Flying",
     "Weaknesses": [
@@ -1869,7 +1869,7 @@
     "Classification": "Twin Bird Pokemon",
     "Name": "Doduo",
     "Cname": "嘟嘟",
-    "MaxCP": 0,
+    "MaxCP": 855,
     "Type I": "Normal",
     "Type II": "Flying",
     "Weaknesses": [
@@ -1891,7 +1891,7 @@
     "Classification": "Triple Bird Pokemon",
     "Name": "Dodrio",
     "Cname": "嘟嘟利",
-    "MaxCP": 0,
+    "MaxCP": 1836,
     "Type I": "Normal",
     "Type II": "Flying",
     "Weaknesses": [
@@ -1913,7 +1913,7 @@
     "Classification": "Sea Lion Pokemon",
     "Name": "Seel",
     "Cname": "小海獅",
-    "MaxCP": 0,
+    "MaxCP": 1107,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -1935,7 +1935,7 @@
     "Classification": "Sea Lion Pokemon",
     "Name": "Dewgong",
     "Cname": "白海獅",
-    "MaxCP": 0,
+    "MaxCP": 2145,
     "Type I": "Water",
     "Type II": "Ice",
     "Weaknesses": [
@@ -1959,7 +1959,7 @@
     "Classification": "Sludge Pokemon",
     "Name": "Grimer",
     "Cname": "臭泥",
-    "MaxCP": 0,
+    "MaxCP": 1284,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -1981,7 +1981,7 @@
     "Classification": "Sludge Pokemon",
     "Name": "Muk",
     "Cname": "臭臭泥",
-    "MaxCP": 0,
+    "MaxCP": 2602,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -2003,7 +2003,7 @@
     "Classification": "Bivalve Pokemon",
     "Name": "Shellder",
     "Cname": "大舌貝",
-    "MaxCP": 0,
+    "MaxCP": 822,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -2024,7 +2024,7 @@
     "Classification": "Bivalve Pokemon",
     "Name": "Cloyster",
     "Cname": "鐵甲貝",
-    "MaxCP": 0,
+    "MaxCP": 2052,
     "Type I": "Water",
     "Type II": "Ice",
     "Weaknesses": [
@@ -2048,7 +2048,7 @@
     "Classification": "Gas Pokemon",
     "Name": "Gastly",
     "Cname": "鬼斯",
-    "MaxCP": 0,
+    "MaxCP": 804,
     "Type I": "Ghost",
     "Type II": "Poison",
     "Weaknesses": [
@@ -2072,7 +2072,7 @@
     "Classification": "Gas Pokemon",
     "Name": "Haunter",
     "Cname": "鬼斯通",
-    "MaxCP": 0,
+    "MaxCP": 1380,
     "Type I": "Ghost",
     "Type II": "Poison",
     "Weaknesses": [
@@ -2096,7 +2096,7 @@
     "Classification": "Shadow Pokemon",
     "Name": "Gengar",
     "Cname": "耿鬼",
-    "MaxCP": 0,
+    "MaxCP": 2078,
     "Type I": "Ghost",
     "Type II": "Poison",
     "Weaknesses": [
@@ -2121,7 +2121,7 @@
     "Classification": "Rock Snake Pokemon",
     "Name": "Onix",
     "Cname": "大岩蛇",
-    "MaxCP": 0,
+    "MaxCP": 857,
     "Type I": "Rock",
     "Type II": "Ground",
     "Weaknesses": [
@@ -2147,7 +2147,7 @@
     "Classification": "Hypnosis Pokemon",
     "Name": "Drowzee",
     "Cname": "素利普",
-    "MaxCP": 0,
+    "MaxCP": 1075,
     "Type I": "Psychic",
     "Weaknesses": [
       "Bug",
@@ -2169,7 +2169,7 @@
     "Classification": "Hypnosis Pokemon",
     "Name": "Hypno",
     "Cname": "素利拍",
-    "MaxCP": 0,
+    "MaxCP": 2184,
     "Type I": "Psychic",
     "Weaknesses": [
       "Bug",
@@ -2191,7 +2191,7 @@
     "Classification": "River Crab Pokemon",
     "Name": "Krabby",
     "Cname": "大鉗蟹",
-    "MaxCP": 0,
+    "MaxCP": 792,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -2212,7 +2212,7 @@
     "Classification": "Pincer Pokemon",
     "Name": "Kingler",
     "Cname": "巨鉗蟹",
-    "MaxCP": 0,
+    "MaxCP": 1823,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -2233,7 +2233,7 @@
     "Classification": "Ball Pokemon",
     "Name": "Voltorb",
     "Cname": "雷電球",
-    "MaxCP": 0,
+    "MaxCP": 839,
     "Type I": "Electric",
     "Weaknesses": [
       "Ground"
@@ -2253,7 +2253,7 @@
     "Classification": "Ball Pokemon",
     "Name": "Electrode",
     "Cname": "頑皮彈",
-    "MaxCP": 0,
+    "MaxCP": 1646,
     "Type I": "Electric",
     "Weaknesses": [
       "Ground"
@@ -2273,7 +2273,7 @@
     "Classification": "Egg Pokemon",
     "Name": "Exeggcute",
     "Cname": "蛋蛋",
-    "MaxCP": 0,
+    "MaxCP": 1099,
     "Type I": "Grass",
     "Type II": "Psychic",
     "Weaknesses": [
@@ -2299,7 +2299,7 @@
     "Classification": "Coconut Pokemon",
     "Name": "Exeggutor",
     "Cname": "椰蛋樹",
-    "MaxCP": 0,
+    "MaxCP": 2955,
     "Type I": "Grass",
     "Type II": "Psychic",
     "Weaknesses": [
@@ -2326,7 +2326,7 @@
     "Classification": "Lonely Pokemon",
     "Name": "Cubone",
     "Cname": "可拉可拉",
-    "MaxCP": 0,
+    "MaxCP": 1006,
     "Type I": "Ground",
     "Weaknesses": [
       "Water",
@@ -2348,7 +2348,7 @@
     "Classification": "Bone Keeper Pokemon",
     "Name": "Marowak",
     "Cname": "嘎拉嘎拉",
-    "MaxCP": 0,
+    "MaxCP": 1656,
     "Type I": "Ground",
     "Weaknesses": [
       "Water",
@@ -2370,7 +2370,7 @@
     "Classification": "Kicking Pokemon",
     "Name": "Hitmonlee",
     "Cname": "沙瓦郎",
-    "MaxCP": 0,
+    "MaxCP": 1492,
     "Type I": "Fighting",
     "Weaknesses": [
       "Flying",
@@ -2393,7 +2393,7 @@
     "Classification": "Punching Pokemon",
     "Name": "Hitmonchan",
     "Cname": "艾比郎",
-    "MaxCP": 0,
+    "MaxCP": 1516,
     "Type I": "Fighting",
     "Weaknesses": [
       "Flying",
@@ -2416,7 +2416,7 @@
     "Classification": "Licking Pokemon",
     "Name": "Lickitung",
     "Cname": "大舌頭",
-    "MaxCP": 0,
+    "MaxCP": 1626,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -2436,7 +2436,7 @@
     "Classification": "Poison Gas Pokemon",
     "Name": "Koffing",
     "Cname": "瓦斯彈",
-    "MaxCP": 0,
+    "MaxCP": 1151,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -2457,7 +2457,7 @@
     "Classification": "Poison Gas Pokemon",
     "Name": "Weezing",
     "Cname": "雙彈瓦斯",
-    "MaxCP": 0,
+    "MaxCP": 2250,
     "Type I": "Poison",
     "Weaknesses": [
       "Ground",
@@ -2478,7 +2478,7 @@
     "Classification": "Spikes Pokemon",
     "Name": "Rhyhorn",
     "Cname": "鐵甲犀牛",
-    "MaxCP": 0,
+    "MaxCP": 1182,
     "Type I": "Ground",
     "Type II": "Rock",
     "Weaknesses": [
@@ -2504,7 +2504,7 @@
     "Classification": "Drill Pokemon",
     "Name": "Rhydon",
     "Cname": "鐵甲暴龍",
-    "MaxCP": 0,
+    "MaxCP": 2243,
     "Type I": "Ground",
     "Type II": "Rock",
     "Weaknesses": [
@@ -2530,7 +2530,7 @@
     "Classification": "Egg Pokemon",
     "Name": "Chansey",
     "Cname": "吉利蛋",
-    "MaxCP": 0,
+    "MaxCP": 675,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -2551,7 +2551,7 @@
     "Classification": "Vine Pokemon",
     "Name": "Tangela",
     "Cname": "蔓藤怪",
-    "MaxCP": 0,
+    "MaxCP": 1739,
     "Type I": "Grass",
     "Weaknesses": [
       "Fire",
@@ -2574,7 +2574,7 @@
     "Classification": "Parent Pokemon",
     "Name": "Kangaskhan",
     "Cname": "袋龍",
-    "MaxCP": 0,
+    "MaxCP": 2043,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -2594,7 +2594,7 @@
     "Classification": "Dragon Pokemon",
     "Name": "Horsea",
     "Cname": "墨海馬",
-    "MaxCP": 0,
+    "MaxCP": 794,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -2615,7 +2615,7 @@
     "Classification": "Dragon Pokemon",
     "Name": "Seadra",
     "Cname": "海刺龍",
-    "MaxCP": 0,
+    "MaxCP": 1713,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -2636,7 +2636,7 @@
     "Classification": "Goldfish Pokemon",
     "Name": "Goldeen",
     "Cname": "角金魚",
-    "MaxCP": 0,
+    "MaxCP": 965,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -2657,7 +2657,7 @@
     "Classification": "Goldfish Pokemon",
     "Name": "Seaking",
     "Cname": "金魚王",
-    "MaxCP": 0,
+    "MaxCP": 2043,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -2678,7 +2678,7 @@
     "Classification": "Starshape Pokemon",
     "Name": "Staryu",
     "Cname": "海星星",
-    "MaxCP": 0,
+    "MaxCP": 937,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -2700,7 +2700,7 @@
     "Classification": "Mysterious Pokemon",
     "Name": "Starmie",
     "Cname": "寶石海星",
-    "MaxCP": 0,
+    "MaxCP": 2182,
     "Type I": "Water",
     "Type II": "Psychic",
     "Weaknesses": [
@@ -2727,7 +2727,7 @@
     "Classification": "Barrier Pokemon",
     "Name": "Mr. Mime",
     "Cname": "吸盤魔偶",
-    "MaxCP": 0,
+    "MaxCP": 1494,
     "Type I": "Psychic",
     "Type II": "Fairy",
     "Weaknesses": [
@@ -2750,7 +2750,7 @@
     "Classification": "Mantis Pokemon",
     "Name": "Scyther",
     "Cname": "飛天螳螂",
-    "MaxCP": 0,
+    "MaxCP": 2073,
     "Type I": "Bug",
     "Type II": "Flying",
     "Weaknesses": [
@@ -2775,7 +2775,7 @@
     "Classification": "Humanshape Pokemon",
     "Name": "Jynx",
     "Cname": "迷唇姐",
-    "MaxCP": 0,
+    "MaxCP": 1716,
     "Type I": "Ice",
     "Type II": "Psychic",
     "Weaknesses": [
@@ -2801,7 +2801,7 @@
     "Classification": "Electric Pokemon",
     "Name": "Electabuzz",
     "Cname": "電擊獸",
-    "MaxCP": 0,
+    "MaxCP": 2119,
     "Type I": "Electric",
     "Weaknesses": [
       "Ground"
@@ -2821,7 +2821,7 @@
     "Classification": "Spitfire Pokemon",
     "Name": "Magmar",
     "Cname": "鴨嘴火龍",
-    "MaxCP": 0,
+    "MaxCP": 2265,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -2843,7 +2843,7 @@
     "Classification": "Stagbeetle Pokemon",
     "Name": "Pinsir",
     "Cname": "大甲",
-    "MaxCP": 0,
+    "MaxCP": 2121,
     "Type I": "Bug",
     "Weaknesses": [
       "Fire",
@@ -2865,7 +2865,7 @@
     "Classification": "Wild Bull Pokemon",
     "Name": "Tauros",
     "Cname": "肯泰羅",
-    "MaxCP": 0,
+    "MaxCP": 1844,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -2885,7 +2885,7 @@
     "Classification": "Fish Pokemon",
     "Name": "Magikarp",
     "Cname": "鯉魚王",
-    "MaxCP": 0,
+    "MaxCP": 262,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -2903,7 +2903,7 @@
     "Classification": "Atrocious Pokemon",
     "Name": "Gyarados",
     "Cname": "暴鯉龍",
-    "MaxCP": 0,
+    "MaxCP": 2688,
     "Type I": "Water",
     "Type II": "Flying",
     "Weaknesses": [
@@ -2925,7 +2925,7 @@
     "Classification": "Transport Pokemon",
     "Name": "Lapras",
     "Cname": "乘龍",
-    "MaxCP": 0,
+    "MaxCP": 2980,
     "Type I": "Water",
     "Type II": "Ice",
     "Weaknesses": [
@@ -2949,7 +2949,7 @@
     "Classification": "Transform Pokemon",
     "Name": "Ditto",
     "Cname": "百變怪",
-    "MaxCP": 0,
+    "MaxCP": 919,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -2966,7 +2966,7 @@
     "Classification": "Evolution Pokemon",
     "Name": "Eevee",
     "Cname": "伊布",
-    "MaxCP": 0,
+    "MaxCP": 1077,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -2986,7 +2986,7 @@
     "Classification": "Bubble Jet Pokemon",
     "Name": "Vaporeon",
     "Cname": "水精靈",
-    "MaxCP": 0,
+    "MaxCP": 2816,
     "Type I": "Water",
     "Weaknesses": [
       "Electric",
@@ -3006,7 +3006,7 @@
     "Classification": "Lightning Pokemon",
     "Name": "Jolteon",
     "Cname": "雷精靈",
-    "MaxCP": 0,
+    "MaxCP": 2140,
     "Type I": "Electric",
     "Weaknesses": [
       "Ground"
@@ -3025,7 +3025,7 @@
     "Classification": "Flame Pokemon",
     "Name": "Flareon",
     "Cname": "火精靈",
-    "MaxCP": 0,
+    "MaxCP": 2643,
     "Type I": "Fire",
     "Weaknesses": [
       "Water",
@@ -3046,7 +3046,7 @@
     "Classification": "Virtual Pokemon",
     "Name": "Porygon",
     "Cname": "３Ｄ龍",
-    "MaxCP": 0,
+    "MaxCP": 1691,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -3067,7 +3067,7 @@
     "Classification": "Spiral Pokemon",
     "Name": "Omanyte",
     "Cname": "菊石獸",
-    "MaxCP": 0,
+    "MaxCP": 1119,
     "Type I": "Rock",
     "Type II": "Water",
     "Weaknesses": [
@@ -3091,7 +3091,7 @@
     "Classification": "Spiral Pokemon",
     "Name": "Omastar",
     "Cname": "多刺菊石獸",
-    "MaxCP": 0,
+    "MaxCP": 2233,
     "Type I": "Rock",
     "Type II": "Water",
     "Weaknesses": [
@@ -3116,7 +3116,7 @@
     "Classification": "Shellfish Pokemon",
     "Name": "Kabuto",
     "Cname": "化石盔",
-    "MaxCP": 0,
+    "MaxCP": 1104,
     "Type I": "Rock",
     "Type II": "Water",
     "Weaknesses": [
@@ -3140,7 +3140,7 @@
     "Classification": "Shellfish Pokemon",
     "Name": "Kabutops",
     "Cname": "鐮刀盔",
-    "MaxCP": 0,
+    "MaxCP": 2130,
     "Type I": "Rock",
     "Type II": "Water",
     "Weaknesses": [
@@ -3164,7 +3164,7 @@
     "Classification": "Fossil Pokemon",
     "Name": "Aerodactyl",
     "Cname": "化石翼龍",
-    "MaxCP": 0,
+    "MaxCP": 2165,
     "Type I": "Rock",
     "Type II": "Flying",
     "Weaknesses": [
@@ -3189,7 +3189,7 @@
     "Classification": "Sleeping Pokemon",
     "Name": "Snorlax",
     "Cname": "卡比獸",
-    "MaxCP": 0,
+    "MaxCP": 3112,
     "Type I": "Normal",
     "Weaknesses": [
       "Fighting"
@@ -3209,7 +3209,7 @@
     "Classification": "Freeze Pokemon",
     "Name": "Articuno",
     "Cname": "急凍鳥",
-    "MaxCP": 0,
+    "MaxCP": 2978,
     "Type I": "Ice",
     "Type II": "Flying",
     "Weaknesses": [
@@ -3232,7 +3232,7 @@
     "Classification": "Electric Pokemon",
     "Name": "Zapdos",
     "Cname": "閃電鳥",
-    "MaxCP": 0,
+    "MaxCP": 3114,
     "Type I": "Electric",
     "Type II": "Flying",
     "Weaknesses": [
@@ -3253,7 +3253,7 @@
     "Classification": "Flame Pokemon",
     "Name": "Moltres",
     "Cname": "火焰鳥",
-    "MaxCP": 0,
+    "MaxCP": 3240,
     "Type I": "Fire",
     "Type II": "Flying",
     "Weaknesses": [
@@ -3275,7 +3275,7 @@
     "Classification": "Dragon Pokemon",
     "Name": "Dratini",
     "Cname": "迷你龍",
-    "MaxCP": 0,
+    "MaxCP": 983,
     "Type I": "Dragon",
     "Weaknesses": [
       "Ice",
@@ -3296,7 +3296,7 @@
     "Classification": "Dragon Pokemon",
     "Name": "Dragonair",
     "Cname": "哈克龍",
-    "MaxCP": 0,
+    "MaxCP": 1747,
     "Type I": "Dragon",
     "Weaknesses": [
       "Ice",
@@ -3317,7 +3317,7 @@
     "Classification": "Dragon Pokemon",
     "Name": "Dragonite",
     "Cname": "快龍",
-    "MaxCP": 0,
+    "MaxCP": 3500,
     "Type I": "Dragon",
     "Type II": "Flying",
     "Weaknesses": [
@@ -3341,7 +3341,7 @@
     "Classification": "Genetic Pokemon",
     "Name": "Mewtwo",
     "Cname": "超夢",
-    "MaxCP": 0,
+    "MaxCP": 4144,
     "Type I": "Psychic",
     "Weaknesses": [
       "Bug",
@@ -3363,7 +3363,7 @@
     "Classification": "New Species Pokemon",
     "Name": "Mew",
     "Cname": "夢幻",
-    "MaxCP": 0,
+    "MaxCP": 3299,
     "Type I": "Psychic",
     "Weaknesses": [
       "Bug",
