@@ -297,7 +297,7 @@ func tgCBHandler(w http.ResponseWriter, r *http.Request) {
 
 	text := tgEntry.Message.Text
 	if text != "" {
-		skills := querySkill(ctx, text)
+		skills := querySkill(ctx, []string{text})
 		returnText := formatSkills(skills)
 
 		err := tgSendTextMessage(ctx, tgEntry.Message.Chat.Id, returnText)
@@ -392,18 +392,29 @@ func fbSendGeneralTemplate(ctx context.Context, senderId int64, elements json.Ra
 	return
 }
 
-func querySkill(ctx context.Context, skillName string) []PokemonSkill {
+func querySkill(ctx context.Context, skillNames []string) (foundSkills []PokemonSkill) {
 	if len(skillMap) == 0 {
 		loadSkillData(ctx)
 	}
 
-	foundSkills := make([]PokemonSkill, 0)
-	for _, s := range skillMap {
-		if strings.Contains(strings.ToLower(s.Name), strings.ToLower(skillName)) {
-			foundSkills = append(foundSkills, s)
+	foundSkills = make([]PokemonSkill, 0)
+	skillToQuery := ""
+	if l := len(skillNames); l > 1 {
+		skillToQuery = strings.Join(skillNames, ",")
+		for _, s := range skillMap {
+			if strings.Contains(strings.ToLower(skillToQuery), strings.ToLower(s.Name)) {
+				foundSkills = append(foundSkills, s)
+			}
+		}
+	} else if l == 1 {
+		skillToQuery = skillNames[0]
+		for _, s := range skillMap {
+			if strings.Contains(strings.ToLower(s.Name), strings.ToLower(skillToQuery)) {
+				foundSkills = append(foundSkills, s)
+			}
 		}
 	}
-	return foundSkills
+	return
 }
 
 func queryMonster(ctx context.Context, monsterName string) []Pokemon {
@@ -530,7 +541,7 @@ func getPokemonNear(ctx context.Context, lat, long float64) (monsters []PokemonP
 	return
 }
 
-func generateTemplateElements(ctx context.Context, items []map[string]string) (elements []map[string]interface{}) {
+func generateTemplateElements(ctx context.Context, items []map[string]interface{}) (elements []map[string]interface{}) {
 	elements = []map[string]interface{}{}
 
 	for _, item := range items {
@@ -539,6 +550,7 @@ func generateTemplateElements(ctx context.Context, items []map[string]string) (e
 			"image_url": item["image_url"],
 			"item_url":  item["item_url"],
 			"subtitle":  item["subtitle"],
+			"buttons":   item["buttons"],
 		}
 		log.Debugf(ctx, "%+v", element)
 		elements = append(elements, element)
@@ -588,28 +600,42 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 				returnText = WELCOME_TEXT
 			case "查技", "查技能", "技能", "skill":
 				user.TodoAction = "QUERY_SKILL"
-				returnText = "找什麼技能？"
+				returnText = "想要找什麼技能？(請輸入技能「英文」關鍵字)"
 			case "查寵", "查寵物", "寵物", "pokemon", "mon":
 				user.TodoAction = "QUERY_MONSTER"
-				returnText = "找什麼寵物？"
+				returnText = "想要找什麼寵物？(請輸入寵物「英文」關鍵字)"
 			case "搜怪", "找怪", "找稀有怪":
 				user.TodoAction = "FIND_MONSTER"
-				returnText = "你在哪？？"
+				returnText = "你在哪？？把你的現在位置傳 (Pin📍) 給我吧！"
 			default:
 				switch user.TodoAction {
 				case "QUERY_MONSTER":
 					monsters := queryMonster(ctx, text)
-					if len(monsters) > 6 {
+					if l := len(monsters); l == 0 {
+						returnText = "沒有找到任何寵物"
+					} else if l > 6 {
 						returnText = "範圍太大，多打些字吧"
 					} else {
-						monstersItems := []map[string]string{}
+						monstersItems := []map[string]interface{}{}
 						for _, m := range monsters {
-							monstersItems = append(monstersItems, map[string]string{
+							typeII := ""
+							if m.TypeII != "" {
+								typeII = fmt.Sprintf(" / %s", m.TypeII)
+							}
+							monstersItems = append(monstersItems, map[string]interface{}{
 								"title": fmt.Sprintf("%s (%s)", m.Cname, m.Name),
-								"subtitle": fmt.Sprintf("屬性: %s %s \n速技: %s\n充能技: %s", m.TypeI, m.TypeII,
+								"subtitle": fmt.Sprintf("屬性: %s%s\n最大CP: %d\n速技: %s\n充能技: %s",
+									m.TypeI, typeII, m.MaxCP,
 									strings.Join(m.FastMoves, ", "), strings.Join(m.ChargedMoves, ", ")),
 								"image_url": fmt.Sprintf("http://pgwave.com/assets/images/pokemon/3d-h120/%d.png", m.Id),
 								"item_url":  fmt.Sprintf("http://pgwave.com/zh-hant/pokemon/%s", m.Id),
+								"buttons": []FBButtonItem{
+									FBButtonItem{
+										Type:    "postback",
+										Title:   "顯示技能資訊",
+										Payload: fmt.Sprintf("QUERY_MONSTER_SKILL:%d", m.Id),
+									},
+								},
 							})
 						}
 						elements := generateTemplateElements(ctx, monstersItems)
@@ -623,7 +649,7 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 						}
 					}
 				case "QUERY_SKILL":
-					skills := querySkill(ctx, text)
+					skills := querySkill(ctx, []string{text})
 					if len(skills) > 6 {
 						returnText = "範圍太大，多打些字吧"
 					} else {
@@ -707,21 +733,39 @@ func fbCBPostHandler(w http.ResponseWriter, r *http.Request) {
 		} else if fbMsg.Delivery != nil {
 		} else if fbMsg.Postback != nil {
 			var returnText string
-			switch fbMsg.Postback.Payload {
-			case "QUERY_MONSTER":
-				returnText = "找什麼寵物？"
-				user.TodoAction = fbMsg.Postback.Payload
-			case "QUERY_SKILL":
-				returnText = "找什麼技能？"
-				user.TodoAction = fbMsg.Postback.Payload
-			case "FIND_MONSTER":
-				returnText = "你在哪？？"
-				user.TodoAction = fbMsg.Postback.Payload
-			case "GET_STARTED":
-				err = fbSendTextMessage(ctx, senderId, WELCOME_TEXT)
-				fallthrough
-			default:
-				user.TodoAction = ""
+			payload := fbMsg.Postback.Payload
+			payloadItems := strings.Split(payload, ":")
+			if len(payloadItems) != 0 {
+				action := payloadItems[0]
+				switch action {
+				case "QUERY_MONSTER":
+					returnText = "想要找什麼寵物？(請輸入寵物「英文」關鍵字)"
+					user.TodoAction = fbMsg.Postback.Payload
+				case "QUERY_MONSTER_SKILL":
+					if len(payloadItems) == 2 {
+						mId, err := strconv.ParseInt(payloadItems[1], 10, 64)
+						if err == nil {
+							monster := monsterMap[mId]
+							err = fbSendTextMessage(ctx, senderId, fmt.Sprintf("查詢「%s」技能", monster.Cname))
+							skills := querySkill(ctx, append(monster.FastMoves, monster.ChargedMoves...))
+							returnText = formatSkills(skills)
+						} else {
+							log.Errorf(ctx, "Can not parse int: %s. Error: %s", payloadItems[1], err.Error())
+							returnText = "查詢過程發生錯誤"
+						}
+					}
+				case "QUERY_SKILL":
+					returnText = "想要找什麼技能？(請輸入技能「英文」關鍵字)"
+					user.TodoAction = fbMsg.Postback.Payload
+				case "FIND_MONSTER":
+					returnText = "你在哪？？把你的現在位置傳 (Pin📍) 給我吧！"
+					user.TodoAction = fbMsg.Postback.Payload
+				case "GET_STARTED":
+					err = fbSendTextMessage(ctx, senderId, WELCOME_TEXT)
+					fallthrough
+				default:
+					user.TodoAction = ""
+				}
 			}
 			if returnText != "" {
 				err = fbSendTextMessage(ctx, senderId, returnText)
