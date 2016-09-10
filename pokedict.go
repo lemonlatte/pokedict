@@ -503,18 +503,13 @@ func getDistances(lat1, long1, lat2, long2 float64) float64 {
 	return math.Sqrt(math.Pow((lat2-lat1)*110, 2) + math.Pow((long2-long1)*110, 2))
 }
 
-func getPokemonNear(ctx context.Context, lat, long float64) (monsters []PokemonPin, err error) {
+func getPokemonNear(ctx context.Context, lat, long float64, distance int64) (monsters []PokemonPin, err error) {
 	if len(monsterMap) == 0 {
 		loadMonsterData(ctx)
 	}
 
 	tr := &urlfetch.Transport{Context: ctx}
-
-	swlat := lat - 0.025
-	swlong := long - 0.025
-	nelat := lat + 0.025
-	nelong := long + 0.025
-	data, err := goradar.GetPokemon(tr.RoundTrip, swlat, swlong, nelat, nelong)
+	data, err := goradar.GetPokemon(tr.RoundTrip, lat, long, distance)
 	if err != nil {
 		log.Errorf(ctx, "%+v", err)
 		return
@@ -529,11 +524,11 @@ func getPokemonNear(ctx context.Context, lat, long float64) (monsters []PokemonP
 			pp := PokemonPin{
 				Id:            pl.Id,
 				Pokemon:       monsterMap[pl.PokemonId],
-				Geohash:       geohash.EncodeWithPrecision(pl.Latitude, pl.Longitude, 6),
 				DisappearTime: pl.DisappearTime,
-				Distance:      getDistances(pl.Latitude, pl.Longitude, lat, long),
-				Latitude:      pl.Latitude,
-				Longitude:     pl.Longitude,
+				Distance:      pl.Distance,
+				Latitude:      pl.Location.Latitude,
+				Longitude:     pl.Location.Longitude,
+				Geohash:       geohash.EncodeWithPrecision(pl.Location.Latitude, pl.Location.Longitude, 6),
 			}
 			monsters = append(monsters, pp)
 		}
